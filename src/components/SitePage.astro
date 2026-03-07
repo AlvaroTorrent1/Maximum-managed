@@ -101,22 +101,29 @@ const spotImages = [
                 </div>
               </div>
 
-              <aside class="hero-note">
+              <!-- Desktop only — participates in parallax alongside hero text -->
+              <aside class="hero-note hero-note-desktop">
                 <p class="mini-kicker">Marbella + 10 km</p>
                 <h2>{page.hero.noteTitle}</h2>
                 <p>{page.hero.noteText}</p>
-                <div class="mini-grid">
-                  <span>Old Town</span>
-                  <span>Puerto Banus</span>
-                  <span>Real estate</span>
-                  <span>Dutch trust</span>
-                </div>
               </aside>
 
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Mobile-only note card: lives outside the hero so it's never
+           covered by the video and doesn't participate in the parallax -->
+      <div class="hero-note-mobile-wrap">
+        <div class="shell">
+          <aside class="hero-note">
+            <p class="mini-kicker">Marbella + 10 km</p>
+            <h2>{page.hero.noteTitle}</h2>
+            <p>{page.hero.noteText}</p>
+          </aside>
+        </div>
+      </div>
 
       <!-- ── INTRO (light) ────────────────────────────────────────────── -->
       <section class="section-intro-light">
@@ -342,6 +349,19 @@ const spotImages = [
     </footer>
 
   <script>
+    // Mide el header real y actualiza --header-h para que las sticky cards
+    // nunca queden tapadas, independientemente del breakpoint o del wrapping de texto.
+    const header = document.querySelector<HTMLElement>(".site-header");
+
+    const syncHeaderHeight = () => {
+      if (!header) return;
+      const h = header.getBoundingClientRect().height;
+      document.documentElement.style.setProperty("--header-h", `${Math.ceil(h)}px`);
+    };
+
+    syncHeaderHeight();
+    window.addEventListener("resize", syncHeaderHeight, { passive: true });
+
     // Hero parallax: text moves up at ~40% of scroll speed, video stays fixed.
     // rAF + passive listener keeps it smooth and off the main thread.
     const heroContent = document.querySelector<HTMLElement>(".hero-content");
