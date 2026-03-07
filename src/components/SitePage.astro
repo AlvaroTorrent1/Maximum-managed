@@ -1,0 +1,375 @@
+---
+import "../styles/site.css";
+import { content, locales, type Locale } from "../data";
+
+type Props = { lang: Locale };
+
+const { lang } = Astro.props;
+const page = content[lang];
+const langLinks = locales.map((code) => ({
+  code,
+  href: code === "nl" ? "/" : `/${code}/`,
+}));
+
+// YouTube video ID — client-selected Marbella background video
+const HERO_VIDEO_ID = "3QUKrxHDFjo";
+
+// Spot images — swap these three URLs with final client photography
+// Recommended: Marbella Old Town, Puerto Banus marina, luxury villa with sea view
+const spotImages = [
+  "/plaza-de-los-naranjos.png", // Casco Antiguo Marbella
+  "/istockphoto-1346794935-612x612.jpg", // Puerto Banus / Marina
+  "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800", // Luxury Villa with sea view
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={page.metaDescription} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{page.metaTitle}</title>
+  </head>
+
+  <body id="top">
+
+    <!-- ── HEADER ──────────────────────────────────────────────────────── -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href={lang === "nl" ? "/" : `/${lang}/`}>
+          <span class="brand-mark">M</span>
+          <span class="brand-text">
+            <strong>Maximum Managed</strong>
+            <small>Property management Marbella</small>
+          </span>
+        </a>
+
+        <nav class="nav">
+          <a href="#about">{page.nav.about}</a>
+          <a href="#services">{page.nav.services}</a>
+          <a href="#approach">{page.nav.approach}</a>
+          <a href="#area">{page.nav.area}</a>
+          <a href="#contact">{page.nav.contact}</a>
+        </nav>
+
+        <div class="langs">
+          {langLinks.map((item) => (
+            <a href={item.href} aria-current={item.code === lang ? "page" : undefined}>
+              {item.code.toUpperCase()}
+            </a>
+          ))}
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ── HERO with YouTube video background ──────────────────────── -->
+      <section class="hero">
+
+        <!-- YouTube iframe cover -->
+        <div class="hero-video-wrap" aria-hidden="true">
+          <iframe
+            src={`https://www.youtube.com/embed/${HERO_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${HERO_VIDEO_ID}&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&vq=hd1080&iv_load_policy=3&cc_load_policy=0&fs=0`}
+            title="Maximum Managed — Marbella"
+            allow="autoplay; encrypted-media"
+            allowfullscreen={false}
+          ></iframe>
+        </div>
+
+        <!-- Content -->
+        <div class="hero-content">
+          <div class="shell">
+            <div class="hero-grid">
+
+              <div class="hero-main">
+                <p class="eyebrow">{page.hero.eyebrow}</p>
+                <h1>{page.hero.title}</h1>
+                <div class="hero-actions">
+                  <a class="button primary" href="#contact">{page.hero.primary}</a>
+                  <a class="button secondary" href="#services">{page.hero.secondary}</a>
+                </div>
+              </div>
+
+              <aside class="hero-note">
+                <p class="mini-kicker">Marbella + 10 km</p>
+                <h2>{page.hero.noteTitle}</h2>
+                <p>{page.hero.noteText}</p>
+                <div class="mini-grid">
+                  <span>Old Town</span>
+                  <span>Puerto Banus</span>
+                  <span>Real estate</span>
+                  <span>Dutch trust</span>
+                </div>
+              </aside>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── INTRO (light) ────────────────────────────────────────────── -->
+      <section class="section-intro-light">
+        <div class="shell">
+          <div class="intro-editorial">
+
+            <!-- Left: big editorial statement -->
+            <div class="intro-statement">
+              <p class="intro-kicker">Property management</p>
+              <h2 class="intro-headline">{page.intro.headline}</h2>
+            </div>
+
+            <!-- Right: three original paragraphs + trust bar -->
+            <div class="intro-support">
+              <p class="intro-p">
+                {page.intro.paragraphs[0]}
+              </p>
+              <p class="intro-p">
+                <em class="intro-accent">{page.intro.accent}</em>{page.intro.paragraphs[1]}
+              </p>
+              <p class="intro-p">
+                {page.intro.paragraphs[2]}
+              </p>
+
+              <div class="intro-trust-bar">
+                <div class="intro-trust-item">
+                  <span class="intro-trust-num">10+</span>
+                  <span class="intro-trust-label">{page.intro.trust[0]}</span>
+                </div>
+                <div class="intro-trust-divider"></div>
+                <div class="intro-trust-item">
+                  <span class="intro-trust-num">100%</span>
+                  <span class="intro-trust-label">{page.intro.trust[1]}</span>
+                </div>
+                <div class="intro-trust-divider"></div>
+                <div class="intro-trust-item">
+                  <span class="intro-trust-num">NL</span>
+                  <span class="intro-trust-label">{page.intro.trust[2]}</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── ABOUT (light, with photo) ───────────────────────────────── -->
+      <section class="section-about" id="about">
+        <div class="shell">
+          <div class="about-grid">
+
+            <div class="about-copy">
+              <p class="eyebrow-dark">{page.about.kicker}</p>
+              <h2>{page.about.title}</h2>
+              <div class="copy">
+                {page.about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              </div>
+              <div class="chips">
+                {page.about.chips.map((chip) => <span>{chip}</span>)}
+              </div>
+            </div>
+
+            <!-- Photo — swap src for real team photo when available -->
+            <div class="about-photo">
+              <img 
+                src="/WhatsApp Image 2026-03-07 at 13.45.41.jpeg" 
+                alt="Jim Smidt - Maximum Managed"
+                style="width: 100%; height: 100%; object-fit: cover;"
+              />
+              <div class="about-photo-caption">Marbella · Old Town</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SERVICES (stacking cards on scroll) ─────────────────────── -->
+      <section class="section-services" id="services">
+        <div class="shell">
+          <div class="services-header">
+            <p class="eyebrow">{page.services.kicker}</p>
+            <h2 class="section-title">{page.services.title}</h2>
+            <div class="gold-rule"></div>
+            <p class="section-lead">{page.services.intro}</p>
+          </div>
+        </div>
+
+        <!-- Stack wrapper: pure CSS sticky accordion, no JS needed -->
+        <div class="services-stack">
+          {page.services.items.map((item, index) => (
+            <div
+              class="scard"
+              style={`--i: ${index};`}
+            >
+              {/* Always-visible strip — peeks out when card is buried */}
+              <div class="shell scard-strip">
+                <span class="scard-num">{String(index + 1).padStart(2, "0")}</span>
+                <h3 class="scard-title">{item.title}</h3>
+              </div>
+              {/* Expandable body — only text, title lives in the strip above */}
+              <div class="shell scard-body">
+                <p class="scard-text">{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- ── APPROACH (light) ─────────────────────────────────────────── -->
+      <section class="section-approach" id="approach">
+        <div class="shell">
+          <div class="approach-grid">
+
+            <div class="approach-header">
+              <p class="eyebrow-dark">{page.approach.kicker}</p>
+              <h2>{page.approach.title}</h2>
+              <div class="gold-rule" style="margin: 16px 0;"></div>
+              <p>{page.approach.intro}</p>
+            </div>
+
+            <div class="approach-points">
+              {page.approach.points.map((point, i) => (
+                <div class="approach-point">
+                  <span class="approach-point-num">{String(i + 1).padStart(2, "0")}</span>
+                  <p>{point}</p>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── REASONS (dark, clean list) ──────────────────────────────── -->
+      <section class="section-reasons">
+        <div class="shell">
+          <div class="reasons-grid">
+
+            <div>
+              <p class="eyebrow">{page.reasons.kicker}</p>
+              <h2 class="section-title">{page.reasons.title}</h2>
+              <div class="gold-rule" style="margin-top: 16px;"></div>
+            </div>
+
+            <div class="reasons-list">
+              {page.reasons.items.map((item) => (
+                <div class="reason-item">
+                  <span class="reason-dot"></span>
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── AREA (light, with photo cards) ──────────────────────────── -->
+      <section class="section-area" id="area">
+        <div class="shell">
+          <div class="area-header">
+            <p class="eyebrow-dark">{page.area.kicker}</p>
+            <h2 class="section-title dark">{page.area.title}</h2>
+            <div class="gold-rule" style="margin: 16px 0;"></div>
+            <p class="section-lead dark">{page.area.text}</p>
+          </div>
+
+          <div class="spot-grid">
+            {page.area.spots.map((spot, i) => (
+              <article class="spot-card">
+                <img
+                  class="spot-card-image"
+                  src={spotImages[i]}
+                  alt={spot.title}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="spot-card-body">
+                  <h3>{spot.title}</h3>
+                  {spot.text && <p>{spot.text}</p>}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACT (dark) ───────────────────────────────────────────── -->
+      <section class="section-contact" id="contact">
+        <div class="shell">
+          <div class="contact-grid">
+
+            <div class="contact-header">
+              <p class="eyebrow">{page.contact.kicker}</p>
+              <h2>{page.contact.title}</h2>
+              <div class="gold-rule" style="margin: 16px 0 20px;"></div>
+              <p>{page.contact.text}</p>
+            </div>
+
+            <div class="contact-card">
+              <div class="button primary">{page.contact.primary}</div>
+              <div class="ghost-tag">{page.contact.secondary}</div>
+              <p class="contact-placeholder">{page.contact.note}</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ── FOOTER ──────────────────────────────────────────────────────── -->
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <strong>Maximum Managed</strong>
+            <p>{page.footer.tagline}</p>
+          </div>
+          <p class="footer-note">{page.footer.note}</p>
+        </div>
+      </div>
+    </footer>
+
+  <script>
+    // Hero parallax: text moves up at ~40% of scroll speed, video stays fixed.
+    // rAF + passive listener keeps it smooth and off the main thread.
+    const heroContent = document.querySelector<HTMLElement>(".hero-content");
+    const hero = document.querySelector<HTMLElement>(".hero");
+
+    if (heroContent && hero) {
+      let ticking = false;
+
+      const update = () => {
+        const scrollY = window.scrollY;
+        const heroH = hero.offsetHeight;
+
+        // Only apply while hero is still visible
+        if (scrollY <= heroH) {
+          // 0.4 = parallax speed factor (text moves at 40% of scroll speed)
+          heroContent.style.transform = `translateY(${scrollY * 0.4}px)`;
+        }
+        ticking = false;
+      };
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          requestAnimationFrame(update);
+          ticking = true;
+        }
+      }, { passive: true });
+    }
+  </script>
+
+  </body>
+</html>
