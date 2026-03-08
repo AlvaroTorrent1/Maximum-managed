@@ -28,7 +28,6 @@ const nl = {
     ],
     accent: "Maximum Managed",
     trust: [
-      "jaar lokale ervaring",
       "persoonlijke aanpak",
       "Nederlandse roots",
     ],
@@ -66,7 +65,7 @@ const nl = {
         text: "Toegang tot verzekeraars, alarmsystemen en surveillance met communicatie in jouw taal.",
       },
       {
-        title: "Vervoer, nutsvoorzieningen en logistiek",
+        title: "Vervoer en nutsdiensten",
         text: "Auto-import, huurauto, internet, water, elektriciteit en internationale transporten praktisch geregeld.",
       },
       {

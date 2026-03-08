@@ -28,7 +28,6 @@ const en = {
     ],
     accent: "Maximum Managed",
     trust: [
-      "years of local expertise",
       "personal approach",
       "Dutch-founded",
     ],
@@ -53,7 +52,7 @@ const en = {
       { title: "Organisation and furnishing", text: "Home setup tailored to private use or rental use." },
       { title: "Renovation and upgrades", text: "Contractors, interior architects, air-conditioning, windows, doors and solar solutions." },
       { title: "Insurance and security", text: "Trusted insurers, alarm systems and surveillance with communication in your own language." },
-      { title: "Transport, utilities and logistics", text: "Car import, rental car support, internet, water, electricity and international transport." },
+      { title: "Transport and utilities", text: "Car import, rental car support, internet, water, electricity and international transport." },
       { title: "Keyholding and administration", text: "Property checks, mail collection and support with permits, taxes and rental administration." },
     ],
   },

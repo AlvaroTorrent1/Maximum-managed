@@ -28,7 +28,6 @@ const de = {
     ],
     accent: "Maximum Managed",
     trust: [
-      "Jahre lokale Erfahrung",
       "persoenliche Betreuung",
       "niederlaendische Wurzeln",
     ],
@@ -53,8 +52,8 @@ const de = {
       { title: "Organisation und Einrichtung", text: "Praktische Einrichtung und optimale Organisation fuer Eigennutzung oder Vermietung." },
       { title: "Renovierung und Verbesserungen", text: "Handwerker, Innenarchitekten, Klimaanlagen, Fenster, Tueren und Solarloesungen." },
       { title: "Versicherungen und Sicherheit", text: "Bewaehrte Versicherer, Alarmsysteme und Ueberwachung mit Kommunikation in Ihrer Sprache." },
-      { title: "Mobilitaet, Nebenkosten und Logistik", text: "Autoimport, Mietwagen, Internet, Wasser, Strom und internationale Transporte." },
-      { title: "Schluesselverwaltung und Administration", text: "Objektkontrollen, Postservice sowie Unterstuetzung bei Genehmigungen, Steuern und Vermietungsverwaltung." },
+      { title: "Mobilitaet und Nebenkosten", text: "Autoimport, Mietwagen, Internet, Wasser, Strom und internationale Transporte." },
+      { title: "Schluessel und Verwaltung", text: "Objektkontrollen, Postservice sowie Unterstuetzung bei Genehmigungen, Steuern und Vermietungsverwaltung." },
     ],
   },
   approach: {

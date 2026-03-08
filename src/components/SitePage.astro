@@ -6,9 +6,19 @@ type Props = { lang: Locale };
 
 const { lang } = Astro.props;
 const page = content[lang];
+const currentLangLabel = lang.toUpperCase();
+
+function localeHref(target: Locale) {
+  if (lang === "nl") {
+    return target === "nl" ? "./" : `./${target}/`;
+  }
+
+  return target === "nl" ? "../" : target === lang ? "./" : `../${target}/`;
+}
+
 const langLinks = locales.map((code) => ({
   code,
-  href: code === "nl" ? "/" : `/${code}/`,
+  href: localeHref(code),
 }));
 
 // YouTube video ID — client-selected Marbella background video
@@ -24,12 +34,13 @@ const spotImages = [
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} translate="no" class="notranslate">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={page.metaDescription} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="google" content="notranslate" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,12 +57,14 @@ const spotImages = [
     <!-- ── HEADER ──────────────────────────────────────────────────────── -->
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href={lang === "nl" ? "/" : `/${lang}/`}>
-          <span class="brand-mark">M</span>
-          <span class="brand-text">
-            <strong>Maximum Managed</strong>
-            <small>Property management Marbella</small>
-          </span>
+        <a class="brand notranslate" href={localeHref(lang)}>
+          <img
+            class="brand-logo"
+            src="/maximum-managed-header.svg"
+            alt="Maximum Managed"
+            width="2917"
+            height="1336"
+          />
         </a>
 
         <nav class="nav">
@@ -62,13 +75,37 @@ const spotImages = [
           <a href="#contact">{page.nav.contact}</a>
         </nav>
 
-        <div class="langs">
+        <div class="langs notranslate">
           {langLinks.map((item) => (
-            <a href={item.href} aria-current={item.code === lang ? "page" : undefined}>
+            <a
+              class="notranslate"
+              href={item.href}
+              aria-current={item.code === lang ? "page" : undefined}
+              translate="no"
+            >
               {item.code.toUpperCase()}
             </a>
           ))}
         </div>
+
+        <details class="lang-menu notranslate">
+          <summary aria-label="Select language" translate="no">
+            <span class="lang-menu-current">{currentLangLabel}</span>
+            <span class="lang-menu-caret" aria-hidden="true"></span>
+          </summary>
+          <div class="lang-menu-panel">
+            {langLinks.map((item) => (
+              <a
+                class="notranslate"
+                href={item.href}
+                aria-current={item.code === lang ? "page" : undefined}
+                translate="no"
+              >
+                {item.code.toUpperCase()}
+              </a>
+            ))}
+          </div>
+        </details>
       </div>
     </header>
 
@@ -150,18 +187,13 @@ const spotImages = [
 
               <div class="intro-trust-bar">
                 <div class="intro-trust-item">
-                  <span class="intro-trust-num">10+</span>
+                  <span class="intro-trust-num">100%</span>
                   <span class="intro-trust-label">{page.intro.trust[0]}</span>
                 </div>
                 <div class="intro-trust-divider"></div>
                 <div class="intro-trust-item">
-                  <span class="intro-trust-num">100%</span>
-                  <span class="intro-trust-label">{page.intro.trust[1]}</span>
-                </div>
-                <div class="intro-trust-divider"></div>
-                <div class="intro-trust-item">
                   <span class="intro-trust-num">NL</span>
-                  <span class="intro-trust-label">{page.intro.trust[2]}</span>
+                  <span class="intro-trust-label">{page.intro.trust[1]}</span>
                 </div>
               </div>
             </div>
@@ -316,17 +348,32 @@ const spotImages = [
         <div class="shell">
           <div class="contact-grid">
 
+            <!-- Left: copy -->
             <div class="contact-header">
               <p class="eyebrow">{page.contact.kicker}</p>
               <h2>{page.contact.title}</h2>
               <div class="gold-rule" style="margin: 16px 0 20px;"></div>
               <p>{page.contact.text}</p>
+
+              <!-- Email — bajo el copy en lugar de columna separada -->
+              <div class="contact-reach">
+                <p class="contact-reach-label">E-mail</p>
+                <a class="contact-email notranslate" href="mailto:contact@maximum-managed.com">
+                  contact@maximum-managed.com
+                </a>
+              </div>
             </div>
 
-            <div class="contact-card">
-              <div class="button primary">{page.contact.primary}</div>
-              <div class="ghost-tag">{page.contact.secondary}</div>
-              <p class="contact-placeholder">{page.contact.note}</p>
+            <!-- Right: team photo — swap src when final photo is ready -->
+            <div class="contact-photo-wrap">
+              <img
+                class="contact-photo"
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=900&h=700"
+                alt="Maximum Managed team"
+                loading="lazy"
+                decoding="async"
+              />
+              <!-- Replace src above with final team photo — all sizing is handled by CSS -->
             </div>
 
           </div>
@@ -340,7 +387,13 @@ const spotImages = [
       <div class="shell">
         <div class="footer-inner">
           <div class="footer-brand">
-            <strong>Maximum Managed</strong>
+            <img
+              class="footer-logo"
+              src="/maximum-managed-logo-full.png"
+              alt="Maximum Managed"
+              width="420"
+              height="252"
+            />
             <p>{page.footer.tagline}</p>
           </div>
           <p class="footer-note">{page.footer.note}</p>

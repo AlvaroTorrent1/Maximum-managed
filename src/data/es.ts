@@ -28,7 +28,6 @@ const es = {
     ],
     accent: "Maximum Managed",
     trust: [
-      "anos de experiencia local",
       "trato personal",
       "origen neerlandes",
     ],
@@ -53,7 +52,7 @@ const es = {
       { title: "Organizacion e interiorismo", text: "Organizacion practica y equipamiento de la vivienda para uso propio o alquiler." },
       { title: "Reformas y mejoras", text: "Constructores, interioristas, aire acondicionado, ventanas, puertas y paneles solares." },
       { title: "Seguros y seguridad", text: "Aseguradoras fiables, alarmas y vigilancia con comunicacion en tu idioma." },
-      { title: "Movilidad, suministros y logistica", text: "Importacion de coche, alquiler, internet, agua, electricidad y transportes internacionales." },
+      { title: "Movilidad y suministros", text: "Importacion de coche, alquiler, internet, agua, electricidad y transportes internacionales." },
       { title: "Llaves y administracion", text: "Revision de la vivienda, recogida de correo y apoyo con licencias, impuestos y administracion del alquiler." },
     ],
   },
