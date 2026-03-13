@@ -264,9 +264,9 @@ img { display: block; max-width: 100%; }
   z-index: 1;
   background:
     linear-gradient(180deg,
-      rgba(5, 17, 27, 0.72) 0%,
-      rgba(5, 17, 27, 0.48) 50%,
-      rgba(5, 17, 27, 0.80) 100%);
+      rgba(5, 17, 27, 0.38) 0%,
+      rgba(5, 17, 27, 0.18) 50%,
+      rgba(5, 17, 27, 0.48) 100%);
 }
 
 .hero-content {
@@ -672,6 +672,13 @@ h1 {
 
 .section-lead.dark { color: var(--text-dark-muted); }
 
+.services-header .section-lead {
+  font-size: clamp(1.08rem, 1.4vw, 1.28rem);
+  line-height: 1.65;
+  color: #d7c094;
+  font-weight: 500;
+}
+
 /* ── Stacking accordion cards ────────────────────────────────────────────────
    Pure CSS mechanic — no JS class-toggling required.
    Each card sticks at:  top = header-height + (--i × collapsed-height)
@@ -975,6 +982,33 @@ h1 {
   text-shadow:
     0 0 28px rgba(201, 169, 110, 0.55),
     0 0 60px rgba(201, 169, 110, 0.25);
+}
+
+.contact-phones {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-person {
+  color: var(--text);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.contact-phone {
+  color: var(--gold);
+  font-size: 1.05rem;
+  line-height: 1.35;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-phone:hover {
+  color: #e8c97e;
 }
 
 /* ── Contact team photo ───────────────────────────────────────────────────── */
