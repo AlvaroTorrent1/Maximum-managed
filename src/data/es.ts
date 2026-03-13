@@ -7,7 +7,7 @@ const es = {
     about: "Nosotros",
     services: "Servicios",
     approach: "Metodo",
-    area: "Marbella",
+    area: "Referencias",
     contact: "Contacto",
   },
   hero: {
@@ -80,13 +80,13 @@ const es = {
     ],
   },
   area: {
-    kicker: "Marbella",
-    title: "Enfocados en Marbella ciudad y su entorno inmediato",
-    text: "Nos centramos en Marbella y en un radio aproximado de 10 kilometros. Esa concentracion local nos permite ser mas rapidos, cercanos y eficaces.",
+    kicker: "Referencias",
+    title: "Lo que dicen los clientes sobre trabajar con nosotros",
+    text: "Una seleccion de experiencias de propietarios que colaboran con Maximum Managed.",
     spots: [
-      { title: "Casco antiguo", text: "" },
-      { title: "Puerto Banus", text: "" },
-      { title: "Villas junto al mar", text: "" },
+      { title: "Propietario de apartamento", text: "\"Comunicacion rapida, seguimiento claro y tranquilidad total.\""},
+      { title: "Propietario de vivienda familiar", text: "\"Todo queda gestionado sin tener que perseguir nada.\""},
+      { title: "Propietario de villa en alquiler", text: "\"Gestion profesional con una atencion realmente personal.\""},
     ],
   },
   contact: {

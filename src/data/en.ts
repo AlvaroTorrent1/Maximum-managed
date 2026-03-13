@@ -7,7 +7,7 @@ const en = {
     about: "About",
     services: "Services",
     approach: "Approach",
-    area: "Marbella",
+    area: "References",
     contact: "Contact",
   },
   hero: {
@@ -80,13 +80,13 @@ const en = {
     ],
   },
   area: {
-    kicker: "Marbella",
-    title: "Focused on Marbella city and its immediate surroundings",
-    text: "We focus on Marbella and roughly a 10-kilometre radius around it. That geographic focus allows us to be faster, more personal and more effective.",
+    kicker: "References",
+    title: "What clients say about working with us",
+    text: "A selection of experiences shared by homeowners who work with Maximum Managed.",
     spots: [
-      { title: "Old Town", text: "" },
-      { title: "Puerto Banus", text: "" },
-      { title: "Seaside villas", text: "" },
+      { title: "Apartment owner", text: "\"Fast communication, clear updates and total peace of mind.\""},
+      { title: "Family home owner", text: "\"Everything is handled without us having to chase a thing.\""},
+      { title: "Rental villa owner", text: "\"Professional management with truly personal attention.\""},
     ],
   },
   contact: {

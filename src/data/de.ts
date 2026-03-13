@@ -7,7 +7,7 @@ const de = {
     about: "Ueber uns",
     services: "Leistungen",
     approach: "Arbeitsweise",
-    area: "Marbella",
+    area: "Referenzen",
     contact: "Kontakt",
   },
   hero: {
@@ -80,13 +80,13 @@ const de = {
     ],
   },
   area: {
-    kicker: "Marbella",
-    title: "Konzentriert auf Marbella und die direkte Umgebung",
-    text: "Unser Fokus liegt auf Marbella und einem Radius von rund 10 Kilometern. Diese lokale Konzentration macht uns schneller, persoenlicher und wirksamer.",
+    kicker: "Referenzen",
+    title: "Was Kunden ueber die Zusammenarbeit mit uns sagen",
+    text: "Eine Auswahl von Erfahrungen internationaler Eigentuemer, die mit Maximum Managed arbeiten.",
     spots: [
-      { title: "Altstadt", text: "" },
-      { title: "Puerto Banus", text: "" },
-      { title: "Villen am Meer", text: "" },
+      { title: "Apartment-Eigentuemer", text: "\"Schnelle Kommunikation, klare Updates und volle Entlastung.\""},
+      { title: "Haus-Eigentuemer", text: "\"Alles wird geregelt, ohne dass wir etwas nachfassen muessen.\""},
+      { title: "Villen-Eigentuemer", text: "\"Professionelle Verwaltung mit wirklich persoenlicher Betreuung.\""},
     ],
   },
   contact: {
