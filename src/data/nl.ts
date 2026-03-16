@@ -102,9 +102,9 @@ const nl = {
     title: "Wat klanten over onze samenwerking zeggen",
     text: "Een selectie van ervaringen van huiseigenaren die met Maximum Managed samenwerken.",
     spots: [
-      { title: "Eigenaar appartement", text: "\"Snel schakelen, helder contact en volledig vertrouwen.\""},
-      { title: "Eigenaar gezinswoning", text: "\"Alles wordt geregeld zonder dat wij iets hoeven na te jagen.\""},
-      { title: "Eigenaar verhuurvilla", text: "\"Professioneel beheer met echt persoonlijke aandacht.\""},
+      { title: "Marbella West", text: "\"Professioneel beheer met echt persoonlijke aandacht.\""},
+      { title: "Marbella Center", text: "\"Snel schakelen, helder contact en volledig vertrouwen.\""},
+      { title: "Marbella East", text: "\"Alles wordt geregeld zonder dat wij iets hoeven na te jagen.\""},
     ],
   },
   contact: {

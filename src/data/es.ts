@@ -84,9 +84,9 @@ const es = {
     title: "Lo que dicen los clientes sobre trabajar con nosotros",
     text: "Una seleccion de experiencias de propietarios que colaboran con Maximum Managed.",
     spots: [
-      { title: "Propietario de apartamento", text: "\"Comunicacion rapida, seguimiento claro y tranquilidad total.\""},
-      { title: "Propietario de vivienda familiar", text: "\"Todo queda gestionado sin tener que perseguir nada.\""},
-      { title: "Propietario de villa en alquiler", text: "\"Gestion profesional con una atencion realmente personal.\""},
+      { title: "Marbella West", text: "\"Gestion profesional con una atencion realmente personal.\""},
+      { title: "Marbella Center", text: "\"Comunicacion rapida, seguimiento claro y tranquilidad total.\""},
+      { title: "Marbella East", text: "\"Todo queda gestionado sin tener que perseguir nada.\""},
     ],
   },
   contact: {

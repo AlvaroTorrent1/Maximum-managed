@@ -84,9 +84,9 @@ const de = {
     title: "Was Kunden ueber die Zusammenarbeit mit uns sagen",
     text: "Eine Auswahl von Erfahrungen internationaler Eigentuemer, die mit Maximum Managed arbeiten.",
     spots: [
-      { title: "Apartment-Eigentuemer", text: "\"Schnelle Kommunikation, klare Updates und volle Entlastung.\""},
-      { title: "Haus-Eigentuemer", text: "\"Alles wird geregelt, ohne dass wir etwas nachfassen muessen.\""},
-      { title: "Villen-Eigentuemer", text: "\"Professionelle Verwaltung mit wirklich persoenlicher Betreuung.\""},
+      { title: "Marbella West", text: "\"Professionelle Verwaltung mit wirklich persoenlicher Betreuung.\""},
+      { title: "Marbella Center", text: "\"Schnelle Kommunikation, klare Updates und volle Entlastung.\""},
+      { title: "Marbella East", text: "\"Alles wird geregelt, ohne dass wir etwas nachfassen muessen.\""},
     ],
   },
   contact: {

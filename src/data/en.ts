@@ -84,9 +84,9 @@ const en = {
     title: "What clients say about working with us",
     text: "A selection of experiences shared by homeowners who work with Maximum Managed.",
     spots: [
-      { title: "Apartment owner", text: "\"Fast communication, clear updates and total peace of mind.\""},
-      { title: "Family home owner", text: "\"Everything is handled without us having to chase a thing.\""},
-      { title: "Rental villa owner", text: "\"Professional management with truly personal attention.\""},
+      { title: "Marbella West", text: "\"Professional management with truly personal attention.\""},
+      { title: "Marbella Center", text: "\"Fast communication, clear updates and total peace of mind.\""},
+      { title: "Marbella East", text: "\"Everything is handled without us having to chase a thing.\""},
     ],
   },
   contact: {
