@@ -23,7 +23,7 @@ const es = {
     headline: "Tu vivienda en Marbella. Sin preocupaciones.",
     paragraphs: [
       "Comprar una vivienda en Marbella es un sueno. Pero una vez completada la compra, surge enseguida la pregunta: quien se ocupa de todo cuando tu no estas?",
-      " se asegura de que tu vivienda este perfectamente organizada, gestionada y, si lo deseas, alquilada con exito. Nos encargamos de todas las gestiones practicas, desde la organizacion y puesta a punto hasta la presentacion optima, para que saques el maximo partido a tu vivienda en Marbella.",
+      "Maximum Managed se asegura de que tu vivienda este perfectamente organizada, gestionada y, si lo deseas, alquilada con exito. Nos encargamos de todas las gestiones practicas, desde la organizacion y puesta a punto hasta la presentacion optima, para que saques el maximo partido a tu vivienda en Marbella.",
       "Combinamos un alto nivel de fiabilidad con conocimiento local y una solida red de contactos en Marbella y alrededores, para actuar con rapidez y con las personas adecuadas.",
     ],
     accent: "Maximum Managed",
@@ -60,12 +60,12 @@ const es = {
     kicker: "Que puedes esperar",
     title: "Acuerdos claros y total transparencia",
     intro:
-      "En Maximum Managed hacemos lo que decimos y decimos lo que hacemos. Cada vivienda y cada situacion es distinta, asi que adaptamos servicio y honorarios contigo.",
+      "Sin sorpresas, solo claridad. Adaptamos todo a tu vivienda y a tu situacion.",
     points: [
-      "Lo que prometemos hoy, se gestiona hoy o lo antes posible.",
-      "Sabes por adelantado cuanto cuesta nuestro servicio y con que colaboradores trabajamos.",
-      "Sin sorpresas posteriores, con comunicacion clara y responsabilidad compartida.",
-      "Trabajamos mejor con propietarios fiables e implicados que entienden la relacion como una colaboracion.",
+      "Puedes contar con tranquilidad y rentabilidad, mientras nos ocupamos de todo hasta el ultimo detalle.",
+      "Trabajamos con transparencia y cumplimos lo acordado. Sabes de antemano a que atenerte y respondemos con rapidez.",
+      "La comunicacion clara y la responsabilidad son centrales en nuestro trabajo.",
+      "Somos emprendedores, actuamos con rapidez y somos conocidos por nuestra fiabilidad.",
     ],
   },
   reasons: {
@@ -91,15 +91,29 @@ const es = {
   },
   contact: {
     kicker: "Conversemos",
-    title: "Dejanos cuidar tu vivienda en Marbella",
+    title: "Dejanos cuidar tu vivienda en Marbella y alrededores",
     text: "Si quieres descubrir como podemos encargarnos de tu vivienda de forma integral, definimos juntos la configuracion adecuada en una primera conversacion.",
     primary: "Solicitar conversacion",
     secondary: "Datos de contacto proximamente",
+    phoneLabel: "Telefono",
+    people: [
+      {
+        name: "Jim Smidt",
+        phones: [
+          { label: "+31 626 290 290", href: "+31626290290" },
+          { label: "+34 605 019 556", href: "+34605019556" },
+        ],
+      },
+      {
+        name: "Gijs Rijnierse",
+        phones: [{ label: "+31 642 2074 81", href: "+31642207481" }],
+      },
+    ],
     note: "La siguiente version puede incorporar aqui directamente la foto del equipo y los datos de contacto definitivos.",
   },
   footer: {
     tagline: "Enjoy Marbella. We take care of the rest.",
-    note: "Property management para propietarios internacionales en Marbella.",
+    note: "Property management para propietarios internacionales en Marbella y alrededores.",
   },
 };
 

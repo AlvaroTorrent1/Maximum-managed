@@ -23,7 +23,7 @@ const de = {
     headline: "Ihre Marbella-Immobilie. Vollstaendig betreut.",
     paragraphs: [
       "Ein Haus in Marbella zu besitzen ist ein Traum. Nach dem Kauf taucht jedoch schnell die praktische Frage auf: Wer regelt alles, wenn Sie nicht vor Ort sind?",
-      " sorgt dafuer, dass Ihre Immobilie perfekt organisiert, betreut und auf Wunsch erfolgreich vermietet wird. Wir uebernehmen alle praktischen Aufgaben, von der Einrichtung bis zur optimalen Praesentation, damit Sie das Maximum aus Ihrer Marbella-Immobilie herausholen.",
+      "Maximum Managed sorgt dafuer, dass Ihre Immobilie perfekt organisiert, betreut und auf Wunsch erfolgreich vermietet wird. Wir uebernehmen alle praktischen Aufgaben, von der Einrichtung bis zur optimalen Praesentation, damit Sie das Maximum aus Ihrer Marbella-Immobilie herausholen.",
       "Wir verbinden Zuverlaessigkeit mit lokaler Kenntnis und einem starken Netzwerk in Marbella und Umgebung, damit wir schnell handeln und immer die richtigen Leute einsetzen koennen.",
     ],
     accent: "Maximum Managed",
@@ -60,12 +60,12 @@ const de = {
     kicker: "Was Sie erwarten duerfen",
     title: "Klare Absprachen und volle Transparenz",
     intro:
-      "Bei Maximum Managed tun wir, was wir sagen. Jede Immobilie ist anders, deshalb stimmen wir Leistungsumfang und Verguetung immer gemeinsam ab.",
+      "Keine Ueberraschungen, nur Klarheit. Wir stimmen alles auf Ihre Immobilie und Situation ab.",
     points: [
-      "Was wir heute zusagen, wird heute oder so schnell wie moeglich umgesetzt.",
-      "Sie wissen im Voraus, was unsere Leistungen kosten und mit welchen Partnern wir arbeiten.",
-      "Keine Ueberraschungen im Nachgang, sondern klare Kommunikation und gegenseitige Verantwortung.",
-      "Wir arbeiten am liebsten mit verlaesslichen Eigentuemern, die Partnerschaft ernst nehmen.",
+      "Sie koennen auf Ruhe und Rendite bauen, waehrend wir alles bis ins Detail fuer Sie organisieren.",
+      "Wir arbeiten transparent und halten Absprachen ein. Sie wissen im Voraus, woran Sie sind, und wir reagieren schnell.",
+      "Klare Kommunikation und Verantwortung stehen bei uns im Mittelpunkt.",
+      "Wir sind unternehmerisch, reagieren schnell und sind fuer unsere Zuverlaessigkeit bekannt.",
     ],
   },
   reasons: {
@@ -91,15 +91,29 @@ const de = {
   },
   contact: {
     kicker: "Kennenlernen",
-    title: "Wir kuemmern uns um Ihre Immobilie in Marbella",
+    title: "Wir kuemmern uns um Ihre Immobilie in Marbella und Umgebung",
     text: "Wenn Sie wissen moechten, wie wir Ihre Immobilie entlasten koennen, besprechen wir die passende Struktur gerne in einem ersten Gespraech.",
     primary: "Gespraech anfragen",
     secondary: "Kontaktdaten folgen",
+    phoneLabel: "Telefon",
+    people: [
+      {
+        name: "Jim Smidt",
+        phones: [
+          { label: "+31 626 290 290", href: "+31626290290" },
+          { label: "+34 605 019 556", href: "+34605019556" },
+        ],
+      },
+      {
+        name: "Gijs Rijnierse",
+        phones: [{ label: "+31 642 2074 81", href: "+31642207481" }],
+      },
+    ],
     note: "Teamfoto und finale Kontaktdaten koennen im naechsten Schritt direkt hier ergaenzt werden.",
   },
   footer: {
     tagline: "Enjoy Marbella. We take care of the rest.",
-    note: "Property Management fuer internationale Eigentuemer in Marbella.",
+    note: "Property Management fuer internationale Eigentuemer in Marbella und Umgebung.",
   },
 };
 

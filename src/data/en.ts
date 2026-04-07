@@ -23,7 +23,7 @@ const en = {
     headline: "Your Marbella home. Completely taken care of.",
     paragraphs: [
       "Buying a home in Marbella is a dream. But once the purchase is completed, the practical question quickly follows: who handles everything when you are not there?",
-      " ensures your property is perfectly organised, managed and, if desired, successfully rented out. We take care of all practical matters — from interior setup to optimal presentation — so you get the most out of your Marbella home.",
+      "Maximum Managed ensures your property is perfectly organised, managed and, if desired, successfully rented out. We take care of all practical matters - from interior setup to optimal presentation - so you get the most out of your Marbella home.",
       "We combine a high level of reliability with local knowledge and a strong network in Marbella and its surroundings, so we can act fast and always bring in the right people.",
     ],
     accent: "Maximum Managed",
@@ -60,12 +60,12 @@ const en = {
     kicker: "What to expect",
     title: "Clear agreements and full transparency",
     intro:
-      "At Maximum Managed, we do what we say and say what we do. Every property is different, so service scope and compensation are always aligned together.",
+      "No surprises, just clarity. We align everything with your home and situation.",
     points: [
-      "What we promise today gets arranged today or as quickly as possible.",
-      "You know in advance what our services cost and which partners are involved.",
-      "No surprises afterwards, only clear communication and mutual accountability.",
-      "We work best with entrepreneurial, trustworthy homeowners who value partnership.",
+      "You can count on peace of mind and results, while we take care of everything down to the last detail.",
+      "We work transparently and keep our promises. You know in advance where you stand, and we follow up quickly.",
+      "Clear communication and responsibility are central to how we work.",
+      "We are entrepreneurial, act fast and are known for our reliability.",
     ],
   },
   reasons: {
@@ -91,16 +91,31 @@ const en = {
   },
   contact: {
     kicker: "Get in touch",
-    title: "Let us take care of your Marbella property",
+    title: "Let us take care of your home in Marbella & the surrounding area",
     text: "If you want to know how we can fully support your home in Marbella, we can map out the right setup together in a first conversation.",
     primary: "Request a conversation",
     secondary: "Contact details to follow",
+    phoneLabel: "Telephone",
+    people: [
+      {
+        name: "Jim Smidt",
+        phones: [
+          { label: "+31 626 290 290", href: "+31626290290" },
+          { label: "+34 605 019 556", href: "+34605019556" },
+        ],
+      },
+      {
+        name: "Gijs Rijnierse",
+        phones: [{ label: "+31 642 2074 81", href: "+31642207481" }],
+      },
+    ],
     note: "The next version can add the team photo and final contact details directly in this section.",
   },
   footer: {
     tagline: "Enjoy Marbella. We take care of the rest.",
-    note: "Property management for international homeowners in Marbella.",
+    note: "Property management for international homeowners in Marbella & the surrounding area.",
   },
 };
 
 export default en;
+

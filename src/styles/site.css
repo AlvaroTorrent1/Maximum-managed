@@ -580,31 +580,59 @@ h1 {
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 28px;
+  gap: 0;
+  margin-top: 32px;
+  align-items: stretch;
 }
 
 .chips span {
-  padding: 8px 20px;
-  border-radius: 999px;
-  border: 1.5px solid var(--line-dark);
-  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 22px;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--text-dark);
-  background: var(--bg-light);
+  line-height: 1.2;
+  position: relative;
+}
+
+.chips span + span {
+  padding-left: 28px;
+  margin-left: 6px;
+}
+
+.chips span + span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 28px;
+  background: var(--line-dark);
+  transform: translateY(-50%);
+  opacity: 0.9;
 }
 
 /* About photo */
 .about-photo {
-  border-radius: var(--radius-xl);
+  justify-self: end;
+  width: min(100%, 92%);
+  border-radius: 12px;
   overflow: hidden;
-  aspect-ratio: 4 / 5;
-  /* Swap this URL with team photo or Marbella lifestyle image when available */
-  background:
-    url("https://picsum.photos/seed/marbella/900/1100")
-    center / cover no-repeat;
+  aspect-ratio: 1 / 1;
+  background: transparent;
   position: relative;
+}
+
+.about-photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
 }
 
 .about-photo-caption {
@@ -699,6 +727,114 @@ h1 {
   padding-right: clamp(24px, 5vw, 80px);
   /* Enough bottom space for the last card to fully scroll into view */
   padding-bottom: 120px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 44px;
+}
+
+.service-card {
+  background: #f7f4ef;
+  color: var(--text-dark);
+  border-radius: 24px;
+  padding: 28px 30px 30px;
+  min-height: 230px;
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.16),
+    0 26px 54px rgba(0, 0, 0, 0.24);
+  will-change: transform, opacity;
+  transition:
+    transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.7s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.service-card-head {
+  display: block;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(18, 30, 40, 0.09);
+}
+
+.service-card-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.service-card-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.service-card-list li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--text-dark-muted);
+}
+
+.service-card-list li::before {
+  content: "∙";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold-dark);
+}
+
+.service-card-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-dark);
+  margin: 0 0 16px;
+}
+
+.service-card-result {
+  margin-top: 18px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-dark-muted);
+}
+
+.service-card-result strong {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.js .reveal-card {
+  opacity: 0;
+}
+
+.reveal-card.reveal-left {
+  transform: translateX(-28px);
+}
+
+.reveal-card.reveal-right {
+  transform: translateX(28px);
+}
+
+.reveal-card.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-card {
+    opacity: 1;
+    transform: none !important;
+    transition: none;
+  }
 }
 
 .scard {
@@ -944,6 +1080,10 @@ h1 {
   max-width: 52ch;
 }
 
+.contact-actions {
+  margin-top: 28px;
+}
+
 .contact-reach {
   display: flex;
   flex-direction: column;
@@ -1143,6 +1283,10 @@ h3 {
 
   .intro-trust-bar { gap: 20px; }
 
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
   .scard-strip { padding: 0 24px; }
   .scard-body  { padding: 24px 24px 32px; }
 
@@ -1273,6 +1417,87 @@ h3 {
     padding: 64px 0;
   }
 
+  .services-grid {
+    margin-top: 20px;
+    gap: 14px;
+  }
+
+  .about-grid {
+    gap: 28px;
+  }
+
+  .about-copy h2 {
+    margin-bottom: 18px;
+  }
+
+  .about-copy .copy p {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .chips {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 18px;
+    margin-top: 24px;
+  }
+
+  .chips::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: calc(50% - 0.5px);
+    width: 1px;
+    background: rgba(18, 30, 40, 0.12);
+    pointer-events: none;
+  }
+
+  .chips span {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    text-align: center;
+    letter-spacing: 0.12em;
+  }
+
+  .chips span + span {
+    padding-left: 12px;
+    margin-left: 0;
+  }
+
+  .chips span + span::before {
+    display: none;
+  }
+
+  .service-card {
+    padding: 24px 22px 26px;
+    min-height: 0;
+    border-radius: 20px;
+    max-width: 100%;
+  }
+
+  .service-card-head {
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+  }
+
+  .service-card-list li {
+    font-size: 0.9rem;
+  }
+
+  .reveal-card,
+  .reveal-card.reveal-left,
+  .reveal-card.reveal-right,
+  .reveal-card.is-visible {
+    transform: none !important;
+  }
+
   .spot-grid { grid-template-columns: 1fr; }
 
   :root {
@@ -1285,10 +1510,26 @@ h3 {
   .scard-body-title { font-size: clamp(1.5rem, 5vw, 2rem); }
 
   .about-photo {
-    aspect-ratio: 3 / 2;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    border-radius: 0;
+    width: 100%;
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    border-radius: 18px;
+    background: var(--surface);
+  }
+
+  .about-photo-image {
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .about-photo-caption {
+    position: static;
+    padding: 16px 20px 18px;
+    background: linear-gradient(180deg, rgba(5, 17, 27, 0.96), rgba(5, 17, 27, 0.92));
+    color: rgba(238, 243, 247, 0.9);
   }
 
   .contact-email { font-size: clamp(1.25rem, 5vw, 1.7rem); }

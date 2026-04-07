@@ -219,9 +219,9 @@ const spotImages = [
             <!-- Photo — swap src for real team photo when available -->
             <div class="about-photo">
               <img 
+                class="about-photo-image"
                 src="/WhatsApp Image 2026-03-14 at 17.33.13.jpeg" 
                 alt="Maximum Managed team"
-                style="width: 100%; height: 100%; object-fit: cover;"
               />
               <div class="about-photo-caption">Marbella · Old Town</div>
             </div>
@@ -240,27 +240,45 @@ const spotImages = [
             <p class="section-lead">{page.services.intro}</p>
           </div>
         </div>
-
-        <!-- Stack wrapper: pure CSS sticky accordion, no JS needed -->
+      {page.services.cards ? (
+          <div class="shell">
+            <div class="services-grid">
+              {page.services.cards.map((item, index) => (
+                <article
+                  class={`service-card reveal-card ${index % 2 === 0 ? "reveal-left" : "reveal-right"}`}
+                  style={`--reveal-delay: ${index * 90}ms;`}
+                >
+                  <div class="service-card-head">
+                    <h3 class="service-card-title">{item.title}</h3>
+                  </div>
+                  {item.subtitle && <p class="service-card-subtitle">{item.subtitle}</p>}
+                  <ul class="service-card-list">
+                    {item.bullets?.map((bullet) => <li>{bullet}</li>)}
+                  </ul>
+                  {item.result && <p class="service-card-result"><strong>Resultaat:</strong> {item.result}</p>}
+              </article>
+            ))}
+          </div>
+        </div>
+      ) : (
         <div class="services-stack">
           {page.services.items.map((item, index) => (
             <div
               class="scard"
               style={`--i: ${index};`}
             >
-              {/* Always-visible strip — peeks out when card is buried */}
               <div class="shell scard-strip">
                 <span class="scard-num">{String(index + 1).padStart(2, "0")}</span>
                 <h3 class="scard-title">{item.title}</h3>
               </div>
-              {/* Expandable body — only text, title lives in the strip above */}
               <div class="shell scard-body">
                 <p class="scard-text">{item.text}</p>
               </div>
             </div>
           ))}
         </div>
-      </section>
+      )}
+    </section>
 
       <!-- ── APPROACH (light) ─────────────────────────────────────────── -->
       <section class="section-approach" id="approach">
@@ -352,6 +370,9 @@ const spotImages = [
               <h2>{page.contact.title}</h2>
               <div class="gold-rule" style="margin: 16px 0 20px;"></div>
               <p>{page.contact.text}</p>
+              <div class="contact-actions">
+                <a class="button primary" href="mailto:contact@maximum-managed.com">{page.contact.primary}</a>
+              </div>
 
               <!-- Email — bajo el copy en lugar de columna separada -->
               <div class="contact-reach">
@@ -360,12 +381,15 @@ const spotImages = [
                   contact@maximum-managed.com
                 </a>
                 <div class="contact-phones notranslate">
-                  <p class="contact-reach-label">Telephone</p>
-                  <p class="contact-person">Jim Smidt</p>
-                  <a class="contact-phone" href="tel:+31626290290">+31 626 290 290</a>
-                  <a class="contact-phone" href="tel:+34605019556">+34 605 019 556</a>
-                  <p class="contact-person">Gijs Rijnierse</p>
-                  <a class="contact-phone" href="tel:+31642207481">+31 642 2074 81</a>
+                  <p class="contact-reach-label">{page.contact.phoneLabel}</p>
+                  {page.contact.people.map((person) => (
+                    <>
+                      <p class="contact-person">{person.name}</p>
+                      {person.phones.map((phone) => (
+                        <a class="contact-phone" href={`tel:${phone.href}`}>{phone.label}</a>
+                      ))}
+                    </>
+                  ))}
                 </div>
               </div>
             </div>
@@ -446,9 +470,36 @@ const spotImages = [
           requestAnimationFrame(update);
           ticking = true;
         }
-      }, { passive: true });
+        }, { passive: true });
+    }
+
+    document.documentElement.classList.add("js");
+
+    const revealCards = Array.from(document.querySelectorAll<HTMLElement>(".reveal-card"));
+
+    if (revealCards.length) {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reduceMotion) {
+        revealCards.forEach((card) => card.classList.add("is-visible"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.18, rootMargin: "0px 0px -8% 0px" },
+        );
+
+        revealCards.forEach((card) => observer.observe(card));
+      }
     }
   </script>
 
   </body>
 </html>
+
