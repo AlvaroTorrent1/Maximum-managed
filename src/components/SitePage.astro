@@ -262,7 +262,7 @@ const spotImages = [
                   <img 
                     src={item.image} 
                     alt={item.title} 
-                    class="service-card-image" 
+                    class={`service-card-image ${item.image === "/alarma.jpg" ? "service-card-image-camera" : ""}`} 
                     loading="lazy" 
                     style={item.image === "/alarma.jpg" ? "object-position: right center;" : ""}
                   />
@@ -496,4 +496,3 @@ const spotImages = [
 
   </body>
 </html>
-
