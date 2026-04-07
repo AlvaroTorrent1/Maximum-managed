@@ -46,14 +46,57 @@ const de = {
     kicker: "Leistungen",
     title: "Alles rund um Ihre Immobilie, professionell koordiniert",
     intro:
-      "Nach dem Immobilienkauf entstehen sofort praktische Themen. Ob Sie selbst in Marbella leben oder die Immobilie vermieten: Wir uebernehmen die Koordination.",
-    items: [
-      { title: "Vermietung und Praesentation", text: "Strategie, Einrichtung, Praesentation und Gaestemanagement fuer maximale Vermietungsleistung." },
-      { title: "Organisation und Einrichtung", text: "Praktische Einrichtung und optimale Organisation fuer Eigennutzung oder Vermietung." },
-      { title: "Renovierung und Verbesserungen", text: "Handwerker, Innenarchitekten, Klimaanlagen, Fenster, Tueren und Solarloesungen." },
-      { title: "Versicherungen und Sicherheit", text: "Bewaehrte Versicherer, Alarmsysteme und Ueberwachung mit Kommunikation in Ihrer Sprache." },
-      { title: "Mobilitaet und Nebenkosten", text: "Autoimport, Mietwagen, Internet, Wasser, Strom und internationale Transporte." },
-      { title: "Schluessel und Verwaltung", text: "Objektkontrollen, Postservice sowie Unterstuetzung bei Genehmigungen, Steuern und Vermietungsverwaltung." },
+      "Nach dem Kauf Ihrer Immobilie entstehen praktische Fragestellungen. Ob Sie selbst in Marbella wohnen oder weitgehend vermieten: Wir uebernehmen gerne die Regie.",
+    resultLabel: "Ergebnis:",
+    cards: [
+      {
+        title: "Vermietung",
+        image: "/rental.jpg",
+        subtitle: "Maximale Rendite, vollstaendige Entlastung",
+        bullets: [
+          "Durchdachte Strategie auf allen Buchungsplattformen",
+          "Professionelle Praesentation mit Fotos und Texten",
+          "Persoenliches Gaestemanagement",
+          "Wir behandeln jede Immobilie, als waere sie unsere eigene",
+        ],
+        result: "Optimale Rendite, mit der Sorgfalt und Aufmerksamkeit, die Ihre Immobilie verdient.",
+      },
+      {
+        title: "Property Management",
+        image: "/cleaning.jpg",
+        subtitle: "Alles geregelt, ganz ohne Sorgen",
+        bullets: [
+          "Regelmaessige Objektkontrollen bei Abwesenheit und kleinere Wartungsarbeiten",
+          "Unterstuetzung bei Genehmigungen, Verwaltung und Steuern",
+          "Koordination von Wartung und Reparaturen",
+          "Reinigungs- und Laundry-Management",
+        ],
+        result: "Vollstaendige Entlastung, damit sich Ihre Immobilie jederzeit in Bestzustand befindet.",
+      },
+      {
+        title: "Einrichtung & Umbau",
+        image: "/renovation.jpg",
+        subtitle: "Komfortabel wohnen, direkt vermietungsbereit",
+        bullets: [
+          "Praktische Einrichtung fuer den taeglichen Gebrauch",
+          "Vermietungsfertige Vorbereitung der Immobilie",
+          "Zusammenarbeit mit erfahrenen Handwerkern und Baupartnern",
+          "Renovierungen und Verbesserungen nach Wunsch",
+        ],
+        result: "Komfortables Wohnen und eine Immobilie mit optimaler Performance.",
+      },
+      {
+        title: "Zusaetzliche Services",
+        image: "/alarma.jpg",
+        subtitle: "Sorglos wohnen, alles perfekt organisiert",
+        bullets: [
+          "Versicherungen ueber verlaessliche Partner",
+          "Sicherheitsloesungen wie Alarmsysteme und Smart Locks",
+          "Hilfe bei Versorgungsvertraegen und Umzug",
+          "Mobilitaet: Mietwagen, Flughafentransfer, Autoimport",
+        ],
+        result: "Zusaetzlicher Komfort, mit einem Service, der bis ins Detail stimmt.",
+      },
     ],
   },
   approach: {
@@ -103,10 +146,6 @@ const de = {
           { label: "+31 626 290 290", href: "+31626290290" },
           { label: "+34 605 019 556", href: "+34605019556" },
         ],
-      },
-      {
-        name: "Gijs Rijnierse",
-        phones: [{ label: "+31 642 2074 81", href: "+31642207481" }],
       },
     ],
     note: "Teamfoto und finale Kontaktdaten koennen im naechsten Schritt direkt hier ergaenzt werden.",

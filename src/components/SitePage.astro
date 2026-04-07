@@ -240,44 +240,38 @@ const spotImages = [
             <p class="section-lead">{page.services.intro}</p>
           </div>
         </div>
-      {page.services.cards ? (
-          <div class="shell">
-            <div class="services-grid">
-              {page.services.cards.map((item, index) => (
-                <article
-                  class={`service-card reveal-card ${index % 2 === 0 ? "reveal-left" : "reveal-right"}`}
-                  style={`--reveal-delay: ${index * 90}ms;`}
-                >
-                  <div class="service-card-head">
-                    <h3 class="service-card-title">{item.title}</h3>
-                  </div>
-                  {item.subtitle && <p class="service-card-subtitle">{item.subtitle}</p>}
-                  <ul class="service-card-list">
-                    {item.bullets?.map((bullet) => <li>{bullet}</li>)}
-                  </ul>
-                  {item.result && <p class="service-card-result"><strong>Resultaat:</strong> {item.result}</p>}
-              </article>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <div class="services-stack">
-          {page.services.items.map((item, index) => (
-            <div
-              class="scard"
-              style={`--i: ${index};`}
+      <div class="shell">
+        <div class="services-grid">
+          {page.services.cards.map((item, index) => (
+            <article
+              class={`service-card reveal-card ${index % 2 === 0 ? "reveal-left" : "reveal-right"}`}
+              style={`--reveal-delay: ${index * 90}ms;`}
             >
-              <div class="shell scard-strip">
-                <span class="scard-num">{String(index + 1).padStart(2, "0")}</span>
-                <h3 class="scard-title">{item.title}</h3>
+              <div class="service-card-content">
+                <div class="service-card-head">
+                  <h3 class="service-card-title">{item.title}</h3>
+                </div>
+                {item.subtitle && <p class="service-card-subtitle">{item.subtitle}</p>}
+                <ul class="service-card-list">
+                  {item.bullets?.map((bullet) => <li>{bullet}</li>)}
+                </ul>
+                {item.result && <p class="service-card-result"><strong>{page.services.resultLabel}</strong> {item.result}</p>}
               </div>
-              <div class="shell scard-body">
-                <p class="scard-text">{item.text}</p>
-              </div>
-            </div>
+              {item.image && (
+                <div class="service-card-image-wrap">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    class="service-card-image" 
+                    loading="lazy" 
+                    style={item.image === "/alarma.jpg" ? "object-position: right center;" : ""}
+                  />
+                </div>
+              )}
+            </article>
           ))}
         </div>
-      )}
+      </div>
     </section>
 
       <!-- ── APPROACH (light) ─────────────────────────────────────────── -->

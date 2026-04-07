@@ -47,9 +47,11 @@ const nl = {
     title: "Alles rondom jouw woning, professioneel geregeld",
     intro:
       "Na de aankoop van jouw woning ontstaan praktische vraagstukken. Of je nu zelf in Marbella verblijft of grotendeels verhuurt: wij nemen graag de regie.",
+    resultLabel: "Resultaat:",
     cards: [
       {
         title: "Verhuur",
+        image: "/rental.jpg",
         subtitle: "Maximaal rendement, volledig ontzorgd",
         bullets: [
           "Slimme strategie op alle boekingsplatforms",
@@ -61,6 +63,7 @@ const nl = {
       },
       {
         title: "Property management",
+        image: "/cleaning.jpg",
         subtitle: "Alles geregeld, zonder zorgen",
         bullets: [
           "Regelmatige woningcontroles (bij afwezigheid) en klein onderhoud",
@@ -72,6 +75,7 @@ const nl = {
       },
       {
         title: "Inrichting & Verbouwing",
+        image: "/renovation.jpg",
         subtitle: "Comfortabel wonen, direct verhuurklaar",
         bullets: [
           "Praktische inrichting voor dagelijks gebruik",
@@ -83,6 +87,7 @@ const nl = {
       },
       {
         title: "Extra services",
+        image: "/alarma.jpg",
         subtitle: "Zorgeloos wonen, alles geregeld",
         bullets: [
           "Verzekeringen via betrouwbare partners",

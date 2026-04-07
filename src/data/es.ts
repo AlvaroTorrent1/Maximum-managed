@@ -46,14 +46,57 @@ const es = {
     kicker: "Que hacemos",
     title: "Todo alrededor de tu vivienda, gestionado con criterio",
     intro:
-      "Tras la compra de una vivienda aparecen muchas gestiones practicas. Tanto si pasas parte del ano en Marbella como si alquilas la propiedad, nosotros coordinamos todo.",
-    items: [
-      { title: "Alquiler y presentacion", text: "Estrategia, interiorismo, presentacion y gestion de huespedes para maximizar el rendimiento." },
-      { title: "Organizacion e interiorismo", text: "Organizacion practica y equipamiento de la vivienda para uso propio o alquiler." },
-      { title: "Reformas y mejoras", text: "Constructores, interioristas, aire acondicionado, ventanas, puertas y paneles solares." },
-      { title: "Seguros y seguridad", text: "Aseguradoras fiables, alarmas y vigilancia con comunicacion en tu idioma." },
-      { title: "Movilidad y suministros", text: "Importacion de coche, alquiler, internet, agua, electricidad y transportes internacionales." },
-      { title: "Llaves y administracion", text: "Revision de la vivienda, recogida de correo y apoyo con licencias, impuestos y administracion del alquiler." },
+      "Despues de comprar tu vivienda surgen cuestiones practicas. Tanto si vives en Marbella como si la alquilas la mayor parte del tiempo, estaremos encantados de llevar la gestion.",
+    resultLabel: "Resultado:",
+    cards: [
+      {
+        title: "Alquiler",
+        image: "/rental.jpg",
+        subtitle: "Maxima rentabilidad, total tranquilidad",
+        bullets: [
+          "Estrategia inteligente en todas las plataformas de reservas",
+          "Presentacion profesional con fotografias y textos",
+          "Gestion personalizada de huespedes",
+          "Tratamos cada vivienda como si fuera nuestra",
+        ],
+        result: "Rentabilidad optima, con el cuidado y la atencion que tu vivienda merece.",
+      },
+      {
+        title: "Property management",
+        image: "/cleaning.jpg",
+        subtitle: "Todo resuelto, sin preocupaciones",
+        bullets: [
+          "Revisiones periodicas de la vivienda en tu ausencia y pequeno mantenimiento",
+          "Apoyo con licencias, administracion e impuestos",
+          "Coordinacion de mantenimiento y reparaciones",
+          "Gestion de limpieza y lavanderia",
+        ],
+        result: "Tranquilidad total, con tu vivienda siempre en perfectas condiciones.",
+      },
+      {
+        title: "Interiorismo y reforma",
+        image: "/renovation.jpg",
+        subtitle: "Vivir con comodidad, lista para alquilar desde el primer dia",
+        bullets: [
+          "Interiorismo practico para el uso diario",
+          "Puesta a punto de la vivienda para alquiler",
+          "Colaboracion con profesionales y contratistas de confianza",
+          "Reformas y mejoras cuando lo desees",
+        ],
+        result: "Una vivienda comoda y preparada para rendir al maximo.",
+      },
+      {
+        title: "Servicios adicionales",
+        image: "/alarma.jpg",
+        subtitle: "Vivir sin complicaciones, con todo organizado",
+        bullets: [
+          "Seguros a traves de colaboradores de confianza",
+          "Soluciones de seguridad: alarmas y cerraduras inteligentes",
+          "Ayuda con suministros y mudanza",
+          "Movilidad: coche de alquiler, servicio de aeropuerto, importacion de vehiculo",
+        ],
+        result: "Comodidad extra, con todo perfectamente resuelto hasta el ultimo detalle.",
+      },
     ],
   },
   approach: {
@@ -103,10 +146,6 @@ const es = {
           { label: "+31 626 290 290", href: "+31626290290" },
           { label: "+34 605 019 556", href: "+34605019556" },
         ],
-      },
-      {
-        name: "Gijs Rijnierse",
-        phones: [{ label: "+31 642 2074 81", href: "+31642207481" }],
       },
     ],
     note: "La siguiente version puede incorporar aqui directamente la foto del equipo y los datos de contacto definitivos.",

@@ -46,14 +46,57 @@ const en = {
     kicker: "What we do",
     title: "Everything around your home, professionally handled",
     intro:
-      "After purchasing a property, practical matters start immediately. Whether you stay in Marbella yourself or rent out the home for most of the year, we coordinate the full picture.",
-    items: [
-      { title: "Rentals and presentation", text: "Strategy, furnishing, presentation and guest management to maximise performance." },
-      { title: "Organisation and furnishing", text: "Home setup tailored to private use or rental use." },
-      { title: "Renovation and upgrades", text: "Contractors, interior architects, air-conditioning, windows, doors and solar solutions." },
-      { title: "Insurance and security", text: "Trusted insurers, alarm systems and surveillance with communication in your own language." },
-      { title: "Transport and utilities", text: "Car import, rental car support, internet, water, electricity and international transport." },
-      { title: "Keyholding and administration", text: "Property checks, mail collection and support with permits, taxes and rental administration." },
+      "After purchasing your property, practical questions start to arise. Whether you stay in Marbella yourself or rent it out for most of the year, we are happy to take the lead.",
+    resultLabel: "Result:",
+    cards: [
+      {
+        title: "Rentals",
+        image: "/rental.jpg",
+        subtitle: "Maximum return, complete peace of mind",
+        bullets: [
+          "Smart strategy across all booking platforms",
+          "Professional presentation with photos and copy",
+          "Personal guest management",
+          "We treat every home as if it were our own",
+        ],
+        result: "Optimal returns, with the care and attention your home deserves.",
+      },
+      {
+        title: "Property management",
+        image: "/cleaning.jpg",
+        subtitle: "Everything arranged, nothing to worry about",
+        bullets: [
+          "Regular property checks during your absence and minor maintenance",
+          "Support with permits, administration and taxes",
+          "Coordination of maintenance and repairs",
+          "Cleaning and laundry management",
+        ],
+        result: "Complete peace of mind, with your home always kept in top condition.",
+      },
+      {
+        title: "Interior setup & renovation",
+        image: "/renovation.jpg",
+        subtitle: "Comfortable living, ready to rent straight away",
+        bullets: [
+          "Practical furnishing for everyday use",
+          "Preparing the property for rental",
+          "Collaboration with trusted tradespeople and contractors",
+          "Renovations and improvements whenever desired",
+        ],
+        result: "Comfortable living and a property that performs at its best.",
+      },
+      {
+        title: "Additional services",
+        image: "/alarma.jpg",
+        subtitle: "Carefree living, with every detail arranged",
+        bullets: [
+          "Insurance through trusted partners",
+          "Security solutions including alarm systems and smart locks",
+          "Help with utilities and moving logistics",
+          "Mobility support: rental car, airport service, car import",
+        ],
+        result: "Extra comfort, with everything handled down to the finest detail.",
+      },
     ],
   },
   approach: {
@@ -103,10 +146,6 @@ const en = {
           { label: "+31 626 290 290", href: "+31626290290" },
           { label: "+34 605 019 556", href: "+34605019556" },
         ],
-      },
-      {
-        name: "Gijs Rijnierse",
-        phones: [{ label: "+31 642 2074 81", href: "+31642207481" }],
       },
     ],
     note: "The next version can add the team photo and final contact details directly in this section.",
