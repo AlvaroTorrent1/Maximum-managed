@@ -50,7 +50,7 @@ const nl = {
     cards: [
       {
         title: "Verhuur",
-        image: "/keys-villa-are-palm-hand.jpg",
+        image: "/service-rental-keys.webp",
         subtitle: "Maximaal rendement, volledig ontzorgd",
         bullets: [
           "Slimme strategie op alle boekingsplatforms",
@@ -83,7 +83,7 @@ const nl = {
       },
       {
         title: "Extra services",
-        image: "/security-camera-mounted-wall-modern-house-with-garden-surveillance-camera-overseeing-entrance-luxury-residence-security-modern-architecture-technology-surveillance-concept.jpg",
+        image: "/service-extra-security-camera.webp",
         subtitle: "Zorgeloos wonen, alles geregeld",
         bullets: [
           "Verzekeringen via betrouwbare partners",

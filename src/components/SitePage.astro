@@ -31,6 +31,30 @@ const spotImages = [
   "/plaza-de-los-naranjos.png", // Marbella Center
   "/istockphoto-1346794935-612x612.jpg", // Marbella East
 ];
+
+const responsiveServiceImages = {
+  "/service-rental-keys.webp": "service-rental-keys",
+  "/service-extra-security-camera.webp": "service-extra-security-camera",
+} as const;
+
+type ResponsiveServiceImage = keyof typeof responsiveServiceImages;
+
+function getServiceCardImageSources(image: string) {
+  const key = image as ResponsiveServiceImage;
+  const baseName = responsiveServiceImages[key];
+
+  if (!baseName) return null;
+
+  const widths = [420, 640, 900];
+
+  return {
+    avifSrcSet: widths.map((width) => `/${baseName}-${width}.avif ${width}w`).join(", "),
+    webpSrcSet: widths.map((width) => `/${baseName}-${width}.webp ${width}w`).join(", "),
+    jpgSrcSet: widths.map((width) => `/${baseName}-${width}.jpg ${width}w`).join(", "),
+    fallbackSrc: `/${baseName}-640.jpg`,
+    sizes: "(max-width: 720px) 100vw, (max-width: 1080px) 100vw, 26vw",
+  };
+}
 ---
 
 <!doctype html>
@@ -257,13 +281,53 @@ const spotImages = [
               </div>
               {item.image && (
                 <div class="service-card-image-wrap">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    class={`service-card-image ${item.image.includes("security-camera-mounted-wall") ? "service-card-image-camera" : ""} ${item.image === "/service-property-management.jpg" ? "service-card-image-towels" : ""}`} 
-                    loading="lazy" 
-                    style={item.image.includes("security-camera-mounted-wall") ? "object-position: 75% center;" : item.image === "/service-property-management.jpg" ? "object-position: 15% center;" : ""}
-                  />
+                  {(() => {
+                    const responsiveSources = getServiceCardImageSources(item.image);
+                    const imageClass = `service-card-image ${item.image.includes("service-extra-security-camera") ? "service-card-image-camera" : ""} ${item.image === "/service-property-management.jpg" ? "service-card-image-towels" : ""}`;
+                    const imageStyle = item.image.includes("service-extra-security-camera")
+                      ? "object-position: 75% center;"
+                      : item.image === "/service-property-management.jpg"
+                        ? "object-position: 15% center;"
+                        : "";
+
+                    if (responsiveSources) {
+                      return (
+                        <picture>
+                          <source
+                            type="image/avif"
+                            srcset={responsiveSources.avifSrcSet}
+                            sizes={responsiveSources.sizes}
+                          />
+                          <source
+                            type="image/webp"
+                            srcset={responsiveSources.webpSrcSet}
+                            sizes={responsiveSources.sizes}
+                          />
+                          <img
+                            src={responsiveSources.fallbackSrc}
+                            srcset={responsiveSources.jpgSrcSet}
+                            sizes={responsiveSources.sizes}
+                            alt={item.title}
+                            class={imageClass}
+                            loading="lazy"
+                            decoding="async"
+                            style={imageStyle}
+                          />
+                        </picture>
+                      );
+                    }
+
+                    return (
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        class={imageClass}
+                        loading="lazy"
+                        decoding="async"
+                        style={imageStyle}
+                      />
+                    );
+                  })()}
                 </div>
               )}
             </article>
