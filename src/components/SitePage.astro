@@ -260,9 +260,9 @@ const spotImages = [
                   <img 
                     src={item.image} 
                     alt={item.title} 
-                    class={`service-card-image ${item.image === "/alarma.jpg" ? "service-card-image-camera" : ""} ${item.image === "/service-property-management.jpg" ? "service-card-image-towels" : ""}`} 
+                    class={`service-card-image ${item.image.includes("security-camera-mounted-wall") ? "service-card-image-camera" : ""} ${item.image === "/service-property-management.jpg" ? "service-card-image-towels" : ""}`} 
                     loading="lazy" 
-                    style={item.image === "/alarma.jpg" ? "object-position: right center;" : item.image === "/service-property-management.jpg" ? "object-position: 15% center;" : ""}
+                    style={item.image.includes("security-camera-mounted-wall") ? "object-position: 75% center;" : item.image === "/service-property-management.jpg" ? "object-position: 15% center;" : ""}
                   />
                 </div>
               )}

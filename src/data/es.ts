@@ -50,7 +50,7 @@ const es = {
     cards: [
       {
         title: "Alquiler",
-        image: "/service-rental.jpg",
+        image: "/keys-villa-are-palm-hand.jpg",
         subtitle: "Maxima rentabilidad, total tranquilidad",
         bullets: [
           "Estrategia inteligente en todas las plataformas de reservas",
@@ -83,7 +83,7 @@ const es = {
       },
       {
         title: "Servicios adicionales",
-        image: "/alarma.jpg",
+        image: "/security-camera-mounted-wall-modern-house-with-garden-surveillance-camera-overseeing-entrance-luxury-residence-security-modern-architecture-technology-surveillance-concept.jpg",
         subtitle: "Vivir sin complicaciones, con todo organizado",
         bullets: [
           "Seguros a traves de colaboradores de confianza",

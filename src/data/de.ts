@@ -50,7 +50,7 @@ const de = {
     cards: [
       {
         title: "Vermietung",
-        image: "/service-rental.jpg",
+        image: "/keys-villa-are-palm-hand.jpg",
         subtitle: "Maximale Rendite, vollstaendige Entlastung",
         bullets: [
           "Durchdachte Strategie auf allen Buchungsplattformen",
@@ -83,7 +83,7 @@ const de = {
       },
       {
         title: "Zusaetzliche Services",
-        image: "/alarma.jpg",
+        image: "/security-camera-mounted-wall-modern-house-with-garden-surveillance-camera-overseeing-entrance-luxury-residence-security-modern-architecture-technology-surveillance-concept.jpg",
         subtitle: "Sorglos wohnen, alles perfekt organisiert",
         bullets: [
           "Versicherungen ueber verlaessliche Partner",

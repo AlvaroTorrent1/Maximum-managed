@@ -50,7 +50,7 @@ const en = {
     cards: [
       {
         title: "Rentals",
-        image: "/service-rental.jpg",
+        image: "/keys-villa-are-palm-hand.jpg",
         subtitle: "Maximum return, complete peace of mind",
         bullets: [
           "Smart strategy across all booking platforms",
@@ -83,7 +83,7 @@ const en = {
       },
       {
         title: "Additional services",
-        image: "/alarma.jpg",
+        image: "/security-camera-mounted-wall-modern-house-with-garden-surveillance-camera-overseeing-entrance-luxury-residence-security-modern-architecture-technology-surveillance-concept.jpg",
         subtitle: "Carefree living, with every detail arranged",
         bullets: [
           "Insurance through trusted partners",
