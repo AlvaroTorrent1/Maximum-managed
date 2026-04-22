@@ -50,7 +50,7 @@ const de = {
     cards: [
       {
         title: "Vermietung",
-        image: "/rental.jpg",
+        image: "/service-rental.jpg",
         subtitle: "Maximale Rendite, vollstaendige Entlastung",
         bullets: [
           "Durchdachte Strategie auf allen Buchungsplattformen",
@@ -61,7 +61,7 @@ const de = {
       },
       {
         title: "Property Management",
-        image: "/arrangement-with-pink-flower-towels-bed.jpg",
+        image: "/service-property-management.jpg",
         subtitle: "Alles geregelt, ganz ohne Sorgen",
         bullets: [
           "Regelmaessige Objektkontrollen bei Abwesenheit and kleinere Wartungsarbeiten",
@@ -72,7 +72,7 @@ const de = {
       },
       {
         title: "Einrichtung & Umbau",
-        image: "/Bali Interior Design Living Rooms.png",
+        image: "/service-interior.jpg",
         subtitle: "Komfortabel wohnen, direkt vermietungsbereit",
         bullets: [
           "Praktische Einrichtung fuer den taeglichen Gebrauch",

@@ -50,7 +50,7 @@ const nl = {
     cards: [
       {
         title: "Verhuur",
-        image: "/rental.jpg",
+        image: "/service-rental.jpg",
         subtitle: "Maximaal rendement, volledig ontzorgd",
         bullets: [
           "Slimme strategie op alle boekingsplatforms",
@@ -61,7 +61,7 @@ const nl = {
       },
       {
         title: "Property management",
-        image: "/arrangement-with-pink-flower-towels-bed.jpg",
+        image: "/service-property-management.jpg",
         subtitle: "Alles geregeld, zonder zorgen",
         bullets: [
           "Regelmatige woningcontroles (bij afwezigheid) en klein onderhoud",
@@ -72,7 +72,7 @@ const nl = {
       },
       {
         title: "Inrichting & Verbouwing",
-        image: "/Bali Interior Design Living Rooms.png",
+        image: "/service-interior.jpg",
         subtitle: "Comfortabel wonen, direct verhuurklaar",
         bullets: [
           "Praktische inrichting voor dagelijks gebruik",

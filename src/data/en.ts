@@ -50,7 +50,7 @@ const en = {
     cards: [
       {
         title: "Rentals",
-        image: "/rental.jpg",
+        image: "/service-rental.jpg",
         subtitle: "Maximum return, complete peace of mind",
         bullets: [
           "Smart strategy across all booking platforms",
@@ -61,7 +61,7 @@ const en = {
       },
       {
         title: "Property management",
-        image: "/arrangement-with-pink-flower-towels-bed.jpg",
+        image: "/service-property-management.jpg",
         subtitle: "Everything arranged, nothing to worry about",
         bullets: [
           "Regular property checks during your absence and minor maintenance",
@@ -72,7 +72,7 @@ const en = {
       },
       {
         title: "Interior setup & renovation",
-        image: "/Bali Interior Design Living Rooms.png",
+        image: "/service-interior.jpg",
         subtitle: "Comfortable living, ready to rent straight away",
         bullets: [
           "Practical furnishing for everyday use",

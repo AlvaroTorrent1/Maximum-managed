@@ -50,7 +50,7 @@ const es = {
     cards: [
       {
         title: "Alquiler",
-        image: "/rental.jpg",
+        image: "/service-rental.jpg",
         subtitle: "Maxima rentabilidad, total tranquilidad",
         bullets: [
           "Estrategia inteligente en todas las plataformas de reservas",
@@ -61,7 +61,7 @@ const es = {
       },
       {
         title: "Property management",
-        image: "/arrangement-with-pink-flower-towels-bed.jpg",
+        image: "/service-property-management.jpg",
         subtitle: "Todo resuelto, sin preocupaciones",
         bullets: [
           "Revisiones periodicas de la vivienda en tu ausencia y pequeno mantenimiento",
@@ -72,7 +72,7 @@ const es = {
       },
       {
         title: "Interiorismo y reforma",
-        image: "/Bali Interior Design Living Rooms.png",
+        image: "/service-interior.jpg",
         subtitle: "Vivir con comodidad, lista para alquilar desde el primer dia",
         bullets: [
           "Interiorismo practico para el uso diario",

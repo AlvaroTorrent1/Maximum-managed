@@ -220,7 +220,7 @@ const spotImages = [
             <div class="about-photo">
               <img 
                 class="about-photo-image"
-                src="/WhatsApp Image 2026-03-14 at 17.33.13.jpeg" 
+                src="/team-photo.jpg" 
                 alt="Maximum Managed team"
               />
             </div>
@@ -260,9 +260,9 @@ const spotImages = [
                   <img 
                     src={item.image} 
                     alt={item.title} 
-                    class={`service-card-image ${item.image === "/alarma.jpg" ? "service-card-image-camera" : ""} ${item.image === "/arrangement-with-pink-flower-towels-bed.jpg" ? "service-card-image-towels" : ""}`} 
+                    class={`service-card-image ${item.image === "/alarma.jpg" ? "service-card-image-camera" : ""} ${item.image === "/service-property-management.jpg" ? "service-card-image-towels" : ""}`} 
                     loading="lazy" 
-                    style={item.image === "/alarma.jpg" ? "object-position: right center;" : item.image === "/arrangement-with-pink-flower-towels-bed.jpg" ? "object-position: 15% center;" : ""}
+                    style={item.image === "/alarma.jpg" ? "object-position: right center;" : item.image === "/service-property-management.jpg" ? "object-position: 15% center;" : ""}
                   />
                 </div>
               )}
@@ -390,7 +390,7 @@ const spotImages = [
             <div class="contact-photo-wrap">
               <img
                 class="contact-photo"
-                src="/WhatsApp Image 2026-03-14 at 17.33.13.jpeg"
+                src="/team-photo.jpg"
                 alt="Maximum Managed team"
                 loading="lazy"
                 decoding="async"
@@ -425,7 +425,7 @@ const spotImages = [
     
     <!-- ── WHATSAPP WIDGET ─────────────────────────────────────────────── -->
     <a 
-      href="https://web.whatsapp.com/send?phone=31626290290" 
+      href="https://wa.me/31626290290" 
       class="whatsapp-widget" 
       target="_blank" 
       rel="noopener noreferrer"
@@ -433,7 +433,7 @@ const spotImages = [
     >
       <div class="whatsapp-message" set:html={page.contact.whatsapp.replace("**", "<strong>").replace("**", "</strong>")}></div>
       <div class="whatsapp-icon-wrap">
-        <img src="/whats app.jpg" alt="WhatsApp" class="whatsapp-icon-img" />
+        <img src="/whatsapp-icon.jpg" alt="WhatsApp" class="whatsapp-icon-img" />
       </div>
     </a>
 
@@ -502,6 +502,35 @@ const spotImages = [
         );
 
         revealCards.forEach((card) => observer.observe(card));
+      }
+    }
+
+    const whatsappWidget = document.querySelector<HTMLAnchorElement>(".whatsapp-widget");
+
+    if (whatsappWidget) {
+      const whatsappPhone = "31626290290";
+      const whatsappAppUrl = `whatsapp://send?phone=${whatsappPhone}`;
+      const whatsappFallbackUrl = `https://wa.me/${whatsappPhone}`;
+      const isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      // Mobile browsers should attempt deep-linking directly into WhatsApp first.
+      if (isMobileDevice) {
+        whatsappWidget.href = whatsappAppUrl;
+        whatsappWidget.target = "_self";
+        whatsappWidget.rel = "";
+
+        whatsappWidget.addEventListener("click", () => {
+          window.setTimeout(() => {
+            // If the app did not open, keep the journey on a WhatsApp-compatible URL.
+            if (document.visibilityState === "visible") {
+              window.location.href = whatsappFallbackUrl;
+            }
+          }, 1200);
+        });
+      } else {
+        whatsappWidget.href = whatsappFallbackUrl;
+        whatsappWidget.target = "_blank";
+        whatsappWidget.rel = "noopener noreferrer";
       }
     }
   </script>
