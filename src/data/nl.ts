@@ -17,7 +17,7 @@ const nl = {
     secondary: "Ontdek onze diensten",
     noteTitle: "Enjoy Marbella. We take care of the rest.",
     noteText:
-      "Van verhuur en property management tot inrichting en verzekeringen en snelle actie ter plaatse.",
+      "Van verhuur en property management tot inrichting, verzekeringen en snelle actie ter plaatse.",
   },
   intro: {
     headline: "Jouw woning volledig ontzorgd.",
@@ -47,7 +47,6 @@ const nl = {
     title: "Alles rondom jouw woning, professioneel geregeld",
     intro:
       "Na de aankoop van jouw woning ontstaan praktische vraagstukken. Of je nu zelf in Marbella verblijft of grotendeels verhuurt: wij nemen graag de regie.",
-    resultLabel: "Resultaat:",
     cards: [
       {
         title: "Verhuur",
@@ -59,11 +58,10 @@ const nl = {
           "Persoonlijk gastenbeheer",
           "Iedere woning behandelen wij alsof het onze eigen woning is",
         ],
-        result: "Optimaal rendement, met de zorg en aandacht die jouw woning verdient.",
       },
       {
         title: "Property management",
-        image: "/cleaning.jpg",
+        image: "/arrangement-with-pink-flower-towels-bed.jpg",
         subtitle: "Alles geregeld, zonder zorgen",
         bullets: [
           "Regelmatige woningcontroles (bij afwezigheid) en klein onderhoud",
@@ -71,11 +69,10 @@ const nl = {
           "Coordinatie van onderhoud en reparaties",
           "Schoonmaak- en laundrymanagement",
         ],
-        result: "Volledige ontzorging, je woning altijd in topconditie.",
       },
       {
         title: "Inrichting & Verbouwing",
-        image: "/renovation.jpg",
+        image: "/Bali Interior Design Living Rooms.png",
         subtitle: "Comfortabel wonen, direct verhuurklaar",
         bullets: [
           "Praktische inrichting voor dagelijks gebruik",
@@ -83,7 +80,6 @@ const nl = {
           "Samenwerking met vakmensen en aannemers",
           "Renovaties en verbeteringen indien gewenst",
         ],
-        result: "Comfortabel wonen en een optimaal renderende woning.",
       },
       {
         title: "Extra services",
@@ -95,7 +91,6 @@ const nl = {
           "Hulp bij nutsvoorzieningen en verhuizing",
           "Mobiliteit: huurauto, luchthavenservice, auto-import",
         ],
-        result: "Extra comfort, alles tot in de puntjes geregeld.",
       },
     ],
   },
@@ -149,6 +144,7 @@ const nl = {
       },
     ],
     note: "Teamfoto en definitieve contactgegevens voegen we in de volgende stap direct in deze sectie toe.",
+    whatsapp: "Vragen? **chat met ons**",
   },
   footer: {
     tagline: "Enjoy Marbella. We take care of the rest.",

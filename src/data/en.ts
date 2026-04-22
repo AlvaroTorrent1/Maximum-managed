@@ -17,7 +17,7 @@ const en = {
     secondary: "Explore our services",
     noteTitle: "Enjoy Marbella. We take care of the rest.",
     noteText:
-      "From setup and rental readiness to keyholding, insurance coordination and rapid on-site action.",
+      "From rentals and property management to interior setup, insurance and rapid on-site action.",
   },
   intro: {
     headline: "Your Marbella home. Completely taken care of.",
@@ -47,7 +47,6 @@ const en = {
     title: "Everything around your home, professionally handled",
     intro:
       "After purchasing your property, practical questions start to arise. Whether you stay in Marbella yourself or rent it out for most of the year, we are happy to take the lead.",
-    resultLabel: "Result:",
     cards: [
       {
         title: "Rentals",
@@ -59,11 +58,10 @@ const en = {
           "Personal guest management",
           "We treat every home as if it were our own",
         ],
-        result: "Optimal returns, with the care and attention your home deserves.",
       },
       {
         title: "Property management",
-        image: "/cleaning.jpg",
+        image: "/arrangement-with-pink-flower-towels-bed.jpg",
         subtitle: "Everything arranged, nothing to worry about",
         bullets: [
           "Regular property checks during your absence and minor maintenance",
@@ -71,11 +69,10 @@ const en = {
           "Coordination of maintenance and repairs",
           "Cleaning and laundry management",
         ],
-        result: "Complete peace of mind, with your home always kept in top condition.",
       },
       {
         title: "Interior setup & renovation",
-        image: "/renovation.jpg",
+        image: "/Bali Interior Design Living Rooms.png",
         subtitle: "Comfortable living, ready to rent straight away",
         bullets: [
           "Practical furnishing for everyday use",
@@ -83,7 +80,6 @@ const en = {
           "Collaboration with trusted tradespeople and contractors",
           "Renovations and improvements whenever desired",
         ],
-        result: "Comfortable living and a property that performs at its best.",
       },
       {
         title: "Additional services",
@@ -95,7 +91,6 @@ const en = {
           "Help with utilities and moving logistics",
           "Mobility support: rental car, airport service, car import",
         ],
-        result: "Extra comfort, with everything handled down to the finest detail.",
       },
     ],
   },
@@ -149,6 +144,7 @@ const en = {
       },
     ],
     note: "The next version can add the team photo and final contact details directly in this section.",
+    whatsapp: "Questions? **chat with us**",
   },
   footer: {
     tagline: "Enjoy Marbella. We take care of the rest.",

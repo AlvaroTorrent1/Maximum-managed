@@ -17,7 +17,7 @@ const es = {
     secondary: "Ver servicios",
     noteTitle: "Enjoy Marbella. We take care of the rest.",
     noteText:
-      "Desde la puesta a punto y la preparacion para alquiler hasta custodia de llaves, seguros y respuesta rapida in situ.",
+      "Desde alquileres y property management hasta interiorismo, seguros y respuesta rápida in situ.",
   },
   intro: {
     headline: "Tu vivienda en Marbella. Sin preocupaciones.",
@@ -47,7 +47,6 @@ const es = {
     title: "Todo alrededor de tu vivienda, gestionado con criterio",
     intro:
       "Despues de comprar tu vivienda surgen cuestiones practicas. Tanto si vives en Marbella como si la alquilas la mayor parte del tiempo, estaremos encantados de llevar la gestion.",
-    resultLabel: "Resultado:",
     cards: [
       {
         title: "Alquiler",
@@ -59,11 +58,10 @@ const es = {
           "Gestion personalizada de huespedes",
           "Tratamos cada vivienda como si fuera nuestra",
         ],
-        result: "Rentabilidad optima, con el cuidado y la atencion que tu vivienda merece.",
       },
       {
         title: "Property management",
-        image: "/cleaning.jpg",
+        image: "/arrangement-with-pink-flower-towels-bed.jpg",
         subtitle: "Todo resuelto, sin preocupaciones",
         bullets: [
           "Revisiones periodicas de la vivienda en tu ausencia y pequeno mantenimiento",
@@ -71,11 +69,10 @@ const es = {
           "Coordinacion de mantenimiento y reparaciones",
           "Gestion de limpieza y lavanderia",
         ],
-        result: "Tranquilidad total, con tu vivienda siempre en perfectas condiciones.",
       },
       {
         title: "Interiorismo y reforma",
-        image: "/renovation.jpg",
+        image: "/Bali Interior Design Living Rooms.png",
         subtitle: "Vivir con comodidad, lista para alquilar desde el primer dia",
         bullets: [
           "Interiorismo practico para el uso diario",
@@ -83,7 +80,6 @@ const es = {
           "Colaboracion con profesionales y contratistas de confianza",
           "Reformas y mejoras cuando lo desees",
         ],
-        result: "Una vivienda comoda y preparada para rendir al maximo.",
       },
       {
         title: "Servicios adicionales",
@@ -95,7 +91,6 @@ const es = {
           "Ayuda con suministros y mudanza",
           "Movilidad: coche de alquiler, servicio de aeropuerto, importacion de vehiculo",
         ],
-        result: "Comodidad extra, con todo perfectamente resuelto hasta el ultimo detalle.",
       },
     ],
   },
@@ -149,6 +144,7 @@ const es = {
       },
     ],
     note: "La siguiente version puede incorporar aqui directamente la foto del equipo y los datos de contacto definitivos.",
+    whatsapp: "¿Preguntas? **chatea con nosotros**",
   },
   footer: {
     tagline: "Enjoy Marbella. We take care of the rest.",

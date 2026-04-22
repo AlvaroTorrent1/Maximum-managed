@@ -223,7 +223,6 @@ const spotImages = [
                 src="/WhatsApp Image 2026-03-14 at 17.33.13.jpeg" 
                 alt="Maximum Managed team"
               />
-              <div class="about-photo-caption">Marbella · Old Town</div>
             </div>
 
           </div>
@@ -255,16 +254,15 @@ const spotImages = [
                 <ul class="service-card-list">
                   {item.bullets?.map((bullet) => <li>{bullet}</li>)}
                 </ul>
-                {item.result && <p class="service-card-result"><strong>{page.services.resultLabel}</strong> {item.result}</p>}
               </div>
               {item.image && (
                 <div class="service-card-image-wrap">
                   <img 
                     src={item.image} 
                     alt={item.title} 
-                    class={`service-card-image ${item.image === "/alarma.jpg" ? "service-card-image-camera" : ""}`} 
+                    class={`service-card-image ${item.image === "/alarma.jpg" ? "service-card-image-camera" : ""} ${item.image === "/arrangement-with-pink-flower-towels-bed.jpg" ? "service-card-image-towels" : ""}`} 
                     loading="lazy" 
-                    style={item.image === "/alarma.jpg" ? "object-position: right center;" : ""}
+                    style={item.image === "/alarma.jpg" ? "object-position: right center;" : item.image === "/arrangement-with-pink-flower-towels-bed.jpg" ? "object-position: 15% center;" : ""}
                   />
                 </div>
               )}
@@ -424,6 +422,20 @@ const spotImages = [
         </div>
       </div>
     </footer>
+    
+    <!-- ── WHATSAPP WIDGET ─────────────────────────────────────────────── -->
+    <a 
+      href="https://web.whatsapp.com/send?phone=31626290290" 
+      class="whatsapp-widget" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <div class="whatsapp-message" set:html={page.contact.whatsapp.replace("**", "<strong>").replace("**", "</strong>")}></div>
+      <div class="whatsapp-icon-wrap">
+        <img src="/whats app.jpg" alt="WhatsApp" class="whatsapp-icon-img" />
+      </div>
+    </a>
 
   <script>
     // Mide el header real y actualiza --header-h para que las sticky cards

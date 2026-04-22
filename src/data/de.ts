@@ -17,7 +17,7 @@ const de = {
     secondary: "Leistungen ansehen",
     noteTitle: "Enjoy Marbella. We take care of the rest.",
     noteText:
-      "Von Einrichtung und Vermietungsvorbereitung bis zu Schluesselverwaltung, Versicherungen und schneller Hilfe vor Ort.",
+      "Von der Vermietung und dem Property Management bis hin zur Einrichtung, Versicherungen und schneller Hilfe vor Ort.",
   },
   intro: {
     headline: "Ihre Marbella-Immobilie. Vollstaendig betreut.",
@@ -47,7 +47,6 @@ const de = {
     title: "Alles rund um Ihre Immobilie, professionell koordiniert",
     intro:
       "Nach dem Kauf Ihrer Immobilie entstehen praktische Fragestellungen. Ob Sie selbst in Marbella wohnen oder weitgehend vermieten: Wir uebernehmen gerne die Regie.",
-    resultLabel: "Ergebnis:",
     cards: [
       {
         title: "Vermietung",
@@ -59,23 +58,21 @@ const de = {
           "Persoenliches Gaestemanagement",
           "Wir behandeln jede Immobilie, als waere sie unsere eigene",
         ],
-        result: "Optimale Rendite, mit der Sorgfalt und Aufmerksamkeit, die Ihre Immobilie verdient.",
       },
       {
         title: "Property Management",
-        image: "/cleaning.jpg",
+        image: "/arrangement-with-pink-flower-towels-bed.jpg",
         subtitle: "Alles geregelt, ganz ohne Sorgen",
         bullets: [
-          "Regelmaessige Objektkontrollen bei Abwesenheit und kleinere Wartungsarbeiten",
+          "Regelmaessige Objektkontrollen bei Abwesenheit and kleinere Wartungsarbeiten",
           "Unterstuetzung bei Genehmigungen, Verwaltung und Steuern",
           "Koordination von Wartung und Reparaturen",
           "Reinigungs- und Laundry-Management",
         ],
-        result: "Vollstaendige Entlastung, damit sich Ihre Immobilie jederzeit in Bestzustand befindet.",
       },
       {
         title: "Einrichtung & Umbau",
-        image: "/renovation.jpg",
+        image: "/Bali Interior Design Living Rooms.png",
         subtitle: "Komfortabel wohnen, direkt vermietungsbereit",
         bullets: [
           "Praktische Einrichtung fuer den taeglichen Gebrauch",
@@ -83,7 +80,6 @@ const de = {
           "Zusammenarbeit mit erfahrenen Handwerkern und Baupartnern",
           "Renovierungen und Verbesserungen nach Wunsch",
         ],
-        result: "Komfortables Wohnen und eine Immobilie mit optimaler Performance.",
       },
       {
         title: "Zusaetzliche Services",
@@ -95,7 +91,6 @@ const de = {
           "Hilfe bei Versorgungsvertraegen und Umzug",
           "Mobilitaet: Mietwagen, Flughafentransfer, Autoimport",
         ],
-        result: "Zusaetzlicher Komfort, mit einem Service, der bis ins Detail stimmt.",
       },
     ],
   },
@@ -149,6 +144,7 @@ const de = {
       },
     ],
     note: "Teamfoto und finale Kontaktdaten koennen im naechsten Schritt direkt hier ergaenzt werden.",
+    whatsapp: "Fragen? **chatten Sie mit uns**",
   },
   footer: {
     tagline: "Enjoy Marbella. We take care of the rest.",
