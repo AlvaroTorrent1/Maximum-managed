@@ -6,7 +6,6 @@ type Props = { lang: Locale };
 
 const { lang } = Astro.props;
 const page = content[lang];
-const currentLangLabel = lang.toUpperCase();
 
 function localeHref(target: Locale) {
   if (lang === "nl") {
@@ -112,22 +111,31 @@ function getServiceCardImageSources(image: string) {
           ))}
         </div>
 
-        <details class="lang-menu notranslate">
-          <summary aria-label="Select language" translate="no">
-            <span class="lang-menu-current">{currentLangLabel}</span>
-            <span class="lang-menu-caret" aria-hidden="true"></span>
+        <details class="mobile-menu notranslate">
+          <summary aria-label="Open menu" translate="no">
+            <span class="mobile-menu-icon" aria-hidden="true"></span>
           </summary>
-          <div class="lang-menu-panel">
-            {langLinks.map((item) => (
-              <a
-                class="notranslate"
-                href={item.href}
-                aria-current={item.code === lang ? "page" : undefined}
-                translate="no"
-              >
-                {item.code.toUpperCase()}
-              </a>
-            ))}
+          <div class="mobile-menu-panel">
+            <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+              <a href="#about">{page.nav.about}</a>
+              <a href="#services">{page.nav.services}</a>
+              <a href="#approach">{page.nav.approach}</a>
+              <a href="#area">{page.nav.area}</a>
+              <a href="#contact">{page.nav.contact}</a>
+            </nav>
+
+            <div class="mobile-menu-langs" aria-label="Select language">
+              {langLinks.map((item) => (
+                <a
+                  class="notranslate"
+                  href={item.href}
+                  aria-current={item.code === lang ? "page" : undefined}
+                  translate="no"
+                >
+                  {item.code.toUpperCase()}
+                </a>
+              ))}
+            </div>
           </div>
         </details>
       </div>
@@ -514,6 +522,22 @@ function getServiceCardImageSources(image: string) {
 
     syncHeaderHeight();
     window.addEventListener("resize", syncHeaderHeight, { passive: true });
+
+    const mobileMenu = document.querySelector<HTMLDetailsElement>(".mobile-menu");
+
+    if (mobileMenu) {
+      mobileMenu.querySelectorAll<HTMLAnchorElement>("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.open = false;
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        const target = event.target;
+        if (!(target instanceof Node) || mobileMenu.contains(target)) return;
+        mobileMenu.open = false;
+      });
+    }
 
     // Hero parallax: text moves up at ~40% of scroll speed, video stays fixed.
     // rAF + passive listener keeps it smooth and off the main thread.
