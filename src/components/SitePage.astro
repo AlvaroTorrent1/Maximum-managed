@@ -116,25 +116,55 @@ function getServiceCardImageSources(image: string) {
             <span class="mobile-menu-icon" aria-hidden="true"></span>
           </summary>
           <div class="mobile-menu-panel">
+            <div class="mobile-menu-header">
+              <img
+                class="mobile-menu-logo"
+                src="/maximum-managed-header.svg"
+                alt="Maximum Managed"
+                width="200"
+                height="92"
+              />
+              <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+            </div>
             <nav class="mobile-menu-nav" aria-label="Mobile navigation">
-              <a href="#about">{page.nav.about}</a>
-              <a href="#services">{page.nav.services}</a>
-              <a href="#approach">{page.nav.approach}</a>
-              <a href="#area">{page.nav.area}</a>
-              <a href="#contact">{page.nav.contact}</a>
+              <a href="#about">
+                <span class="nav-num">01</span>
+                <span class="nav-label">{page.nav.about}</span>
+              </a>
+              <a href="#services">
+                <span class="nav-num">02</span>
+                <span class="nav-label">{page.nav.services}</span>
+              </a>
+              <a href="#approach">
+                <span class="nav-num">03</span>
+                <span class="nav-label">{page.nav.approach}</span>
+              </a>
+              <a href="#area">
+                <span class="nav-num">04</span>
+                <span class="nav-label">{page.nav.area}</span>
+              </a>
+              <a href="#contact">
+                <span class="nav-num">05</span>
+                <span class="nav-label">{page.nav.contact}</span>
+              </a>
             </nav>
 
-            <div class="mobile-menu-langs" aria-label="Select language">
-              {langLinks.map((item) => (
-                <a
-                  class="notranslate"
-                  href={item.href}
-                  aria-current={item.code === lang ? "page" : undefined}
-                  translate="no"
-                >
-                  {item.code.toUpperCase()}
-                </a>
-              ))}
+            <div class="mobile-menu-footer">
+              <div class="mobile-menu-langs" aria-label="Select language">
+                {langLinks.map((item) => (
+                  <a
+                    class="notranslate"
+                    href={item.href}
+                    aria-current={item.code === lang ? "page" : undefined}
+                    translate="no"
+                  >
+                    {item.code.toUpperCase()}
+                  </a>
+                ))}
+              </div>
+              <div class="mobile-menu-contact">
+                <a href="mailto:contact@maximum-managed.com" class="contact-link">contact@maximum-managed.com</a>
+              </div>
             </div>
           </div>
         </details>
@@ -526,16 +556,39 @@ function getServiceCardImageSources(image: string) {
     const mobileMenu = document.querySelector<HTMLDetailsElement>(".mobile-menu");
 
     if (mobileMenu) {
+      const closeBtn = mobileMenu.querySelector(".mobile-menu-close");
+      
+      if (closeBtn) {
+        closeBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          mobileMenu.open = false;
+          document.body.style.overflow = "";
+        });
+      }
+
+      mobileMenu.addEventListener("toggle", () => {
+        if (mobileMenu.open) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "";
+        }
+      });
+
       mobileMenu.querySelectorAll<HTMLAnchorElement>("a").forEach((link) => {
         link.addEventListener("click", () => {
           mobileMenu.open = false;
+          document.body.style.overflow = "";
         });
       });
 
       document.addEventListener("click", (event) => {
         const target = event.target;
         if (!(target instanceof Node) || mobileMenu.contains(target)) return;
-        mobileMenu.open = false;
+        if (mobileMenu.open) {
+          mobileMenu.open = false;
+          document.body.style.overflow = "";
+        }
       });
     }
 
