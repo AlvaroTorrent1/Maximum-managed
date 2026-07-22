@@ -133,17 +133,6 @@ const de = {
     text: "Wenn Sie wissen moechten, wie wir Ihre Immobilie entlasten koennen, besprechen wir die passende Struktur gerne in einem ersten Gespraech.",
     primary: "Gespraech anfragen",
     secondary: "Kontaktdaten folgen",
-    phoneLabel: "Telefon",
-    people: [
-      {
-        name: "Anke de Boer",
-        phones: [{ label: "+34 666 697 743", href: "+34666697743" }],
-      },
-      {
-        name: "Gijs Rijnierse",
-        phones: [{ label: "+31 642 207 481", href: "+31642207481" }],
-      },
-    ],
     note: "Teamfoto und finale Kontaktdaten koennen im naechsten Schritt direkt hier ergaenzt werden.",
     whatsapp: "Fragen? **chatten Sie mit uns**",
   },

@@ -1361,33 +1361,6 @@ h1 {
     0 0 60px rgba(201, 169, 110, 0.25);
 }
 
-.contact-phones {
-  margin-top: 26px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.contact-person {
-  color: var(--text);
-  font-weight: 600;
-  margin-top: 8px;
-}
-
-.contact-phone {
-  color: var(--gold);
-  font-size: 1.05rem;
-  line-height: 1.35;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.contact-phone:hover {
-  color: #e8c97e;
-}
-
 /* ── Contact team photo ───────────────────────────────────────────────────── */
 .contact-photo-wrap {
   position: relative;

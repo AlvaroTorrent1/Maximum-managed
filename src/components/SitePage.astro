@@ -474,17 +474,6 @@ function getServiceCardImageSources(image: string) {
                 <a class="contact-email notranslate" href="mailto:contact@maximum-managed.com">
                   contact@maximum-managed.com
                 </a>
-                <div class="contact-phones notranslate">
-                  <p class="contact-reach-label">{page.contact.phoneLabel}</p>
-                  {page.contact.people.map((person) => (
-                    <>
-                      <p class="contact-person">{person.name}</p>
-                      {person.phones.map((phone) => (
-                        <a class="contact-phone" href={`tel:${phone.href}`}>{phone.label}</a>
-                      ))}
-                    </>
-                  ))}
-                </div>
               </div>
             </div>
 

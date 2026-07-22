@@ -133,17 +133,6 @@ const nl = {
     text: "Wil je weten hoe wij jou volledig kunnen ontzorgen aangaande jouw woning? Plan dan een vrijblijvend gesprek in en ontdek hoe wij alles om en rondom jouw woning kunnen regelen!",
     primary: "Kennismaken",
     secondary: "Contactgegevens volgen",
-    phoneLabel: "Telefoon",
-    people: [
-      {
-        name: "Anke de Boer",
-        phones: [{ label: "+34 666 697 743", href: "+34666697743" }],
-      },
-      {
-        name: "Gijs Rijnierse",
-        phones: [{ label: "+31 642 207 481", href: "+31642207481" }],
-      },
-    ],
     note: "Teamfoto en definitieve contactgegevens voegen we in de volgende stap direct in deze sectie toe.",
     whatsapp: "Vragen? **chat met ons**",
   },

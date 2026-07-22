@@ -133,17 +133,6 @@ const es = {
     text: "Si quieres descubrir como podemos encargarnos de tu vivienda de forma integral, definimos juntos la configuracion adecuada en una primera conversacion.",
     primary: "Solicitar conversacion",
     secondary: "Datos de contacto proximamente",
-    phoneLabel: "Telefono",
-    people: [
-      {
-        name: "Anke de Boer",
-        phones: [{ label: "+34 666 697 743", href: "+34666697743" }],
-      },
-      {
-        name: "Gijs Rijnierse",
-        phones: [{ label: "+31 642 207 481", href: "+31642207481" }],
-      },
-    ],
     note: "La siguiente version puede incorporar aqui directamente la foto del equipo y los datos de contacto definitivos.",
     whatsapp: "¿Preguntas? **chatea con nosotros**",
   },
