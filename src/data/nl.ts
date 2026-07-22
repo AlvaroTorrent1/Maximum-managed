@@ -136,11 +136,12 @@ const nl = {
     phoneLabel: "Telefoon",
     people: [
       {
-        name: "Jim Smidt",
-        phones: [
-          { label: "+31 626 290 290", href: "+31626290290" },
-          { label: "+34 605 019 556", href: "+34605019556" },
-        ],
+        name: "Anke de Boer",
+        phones: [{ label: "+34 666 697 743", href: "+34666697743" }],
+      },
+      {
+        name: "Gijs Rijnierse",
+        phones: [{ label: "+31 642 207 481", href: "+31642207481" }],
       },
     ],
     note: "Teamfoto en definitieve contactgegevens voegen we in de volgende stap direct in deze sectie toe.",
