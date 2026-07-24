@@ -36,9 +36,8 @@ const en = {
     kicker: "About us",
     title: "A family business that thinks like an owner and acts like a partner",
     paragraphs: [
-      "Maximum Managed was founded by Jim Smidt, a Dutch real estate entrepreneur with years of experience in property management and rentals.",
-      "The business grew from the collaboration with Esther Smidt of Maximum Organised, specialising in organising, furnishing and rental-ready preparation.",
-      "Personal contact, trust and commitment remain central. Every home is treated as if it were our own.",
+      "Maximum Managed was born from the conviction that property management can be more personal. As Dutch entrepreneurs living in Marbella, we saw that many international homeowners, including many Dutch and Belgian owners, need a reliable local point of contact who thinks along with them, takes care of everything and is always there when needed.",
+      "Personal contact, trust and commitment form the foundation of how we work. We treat every home as if it were our own.",
     ],
     chips: ["Reliable", "Local", "Personal", "Multilingual"],
   },

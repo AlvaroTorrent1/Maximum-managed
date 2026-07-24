@@ -36,9 +36,8 @@ const es = {
     kicker: "Quienes somos",
     title: "Una empresa familiar que piensa como propietario y actua como socio",
     paragraphs: [
-      "Maximum Managed fue fundada por Jim Smidt, empresario inmobiliario neerlandes con anos de experiencia en gestion y alquiler de viviendas.",
-      "La empresa nace de la colaboracion con Esther Smidt de Maximum Organised, especializada en organizacion, interiorismo y preparacion de viviendas para alquiler.",
-      "El trato personal, la confianza y la implicacion siguen siendo centrales. Tratamos cada vivienda como si fuera nuestra.",
+      "Maximum Managed nació de la convicción de que la gestión de propiedades puede ser más personal. Como empresarios neerlandeses residentes en Marbella, vimos que muchos propietarios internacionales, entre ellos muchos neerlandeses y belgas, necesitaban un contacto local de confianza que les asesore, les facilite todo y esté siempre disponible.",
+      "El trato personal, la confianza y la implicación son la base de nuestra forma de trabajar. Tratamos cada vivienda como si fuera nuestra.",
     ],
     chips: ["Fiable", "Local", "Cercana", "Multilingue"],
   },

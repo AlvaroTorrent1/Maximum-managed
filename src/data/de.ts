@@ -36,9 +36,8 @@ const de = {
     kicker: "Ueber uns",
     title: "Ein Familienunternehmen mit Eigentuemer-Mentalitaet",
     paragraphs: [
-      "Maximum Managed wurde von Jim Smidt gegruendet, einem niederlaendischen Immobilienunternehmer mit langjaehriger Erfahrung in Verwaltung und Vermietung.",
-      "Das Unternehmen entstand aus der Zusammenarbeit mit Esther Smidt von Maximum Organised, spezialisiert auf Organisation, Einrichtung und Vermietungsvorbereitung.",
-      "Persoenlicher Kontakt, Vertrauen und Engagement stehen im Mittelpunkt. Jede Immobilie wird behandelt, als waere sie unsere eigene.",
+      "Maximum Managed entstand aus der Überzeugung, dass Immobilienverwaltung persönlicher sein kann. Als niederländische Unternehmer, die in Marbella leben, stellten wir fest, dass viele internationale Immobilieneigentümer – darunter viele niederländische und belgische Eigentümer – einen zuverlässigen Ansprechpartner vor Ort suchen, der mitdenkt, entlastet und jederzeit für sie da ist.",
+      "Persönlicher Kontakt, Vertrauen und Engagement bilden die Grundlage unserer Arbeitsweise. Wir behandeln jede Immobilie, als wäre sie unsere eigene.",
     ],
     chips: ["Verlaesslich", "Lokal", "Persoenlich", "Mehrsprachig"],
   },
